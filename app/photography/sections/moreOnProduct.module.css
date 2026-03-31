@@ -1,0 +1,113 @@
+.moreOnProduct {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: #06061a;
+  padding: 5rem clamp(1.5rem, 6vw, 7rem);
+  width: 100%;
+  justify-content: center;
+  color: #f5f3ee;
+}
+
+.header {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 600px;
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.header > p {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #f6f4f7;
+  font-weight: 600;
+}
+
+.header > h1 {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  line-height: 1.3;
+  margin: 0;
+  margin-top: 0.5rem;
+}
+
+.moreOnProductContents {
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  color: var(--foreground);
+}
+
+.moreOnProductContents > li {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  background-color: var(--background);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+  animation-delay: calc(0.15s * var(--delay));
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.moreOnProductContents > li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.moreOnProductContents > li > h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.moreOnProductContents > li > p {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  opacity: 0.75;
+}
+
+.marker {
+  background-color: #e8a234;
+  color: #020000;
+  width: fit-content;
+  border-radius: 0.3rem;
+  display: flex;
+  align-items: center;
+  padding: 0.2rem 0.5rem;
+}
+
+.marker > h1 {
+  margin-top: 0.2rem;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 800px) {
+  .moreOnProduct {
+    padding: 3rem 1.5rem;
+  }
+  .moreOnProductContents {
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}

@@ -1,0 +1,58 @@
+.intro {
+  background-image: url("https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 50vh;
+  color: white;
+  position: relative;
+  display: flex;
+  margin-top: 64px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 100%;
+  min-height: 50vh;
+  background: rgba(0, 0, 0, 0.75);
+  padding: clamp(1.5rem, 6vw, 7rem);
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.tag {
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #c9a84c;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: 1.1;
+  max-width: 700px;
+  color: #f5f3ee;
+}
+
+.title em {
+  color: #c9a84c;
+  font-style: italic;
+}
+
+.desc {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: rgba(245, 243, 238, 0.65);
+  max-width: 600px;
+}
+
+@media (max-width: 800px) {
+  .content {
+    padding: 1.5rem;
+    padding-top: 3rem;
+  }
+}

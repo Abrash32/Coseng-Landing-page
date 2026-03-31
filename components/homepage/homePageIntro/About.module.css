@@ -1,0 +1,140 @@
+.about {
+  padding: 7rem clamp(1.5rem, 6vw, 7rem);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  background: #06061a;
+}
+
+.sectionTag {
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #c9a84c;
+  margin-bottom: 1rem;
+}
+
+.sectionTitle {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: #f5f3ee;
+}
+
+.sectionTitle em {
+  color: #c9a84c;
+  font-style: italic;
+}
+
+.aboutText {
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: rgba(245,243,238,0.65);
+  margin-bottom: 2rem;
+}
+
+.btnPrimary {
+  display: inline-block;
+  background: #c9a84c;
+  color: #06061a;
+  padding: 0.9rem 2rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: background 0.2s, transform 0.2s;
+  margin-bottom: 3rem;
+}
+
+.btnPrimary:hover {
+  background: #e8c96d;
+  transform: translateY(-2px);
+}
+
+/* Stats grid */
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.stat {
+  border-left: 2px solid rgba(201,168,76,0.3);
+  padding-left: 1rem;
+}
+
+.statNum {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #c9a84c;
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+
+.statLabel {
+  font-size: 0.8rem;
+  color: rgba(245,243,238,0.5);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Images */
+.aboutRight {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  height: 450px;
+}
+
+.imgTop {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 0;
+}
+
+.imgBottom {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 3rem;
+}
+
+.badge {
+  position: absolute;
+  bottom: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #c9a84c;
+  color: #06061a;
+  padding: 1rem 1.5rem;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.badge span {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .about {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .aboutRight {
+    height: 300px;
+  }
+}

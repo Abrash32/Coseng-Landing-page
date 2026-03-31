@@ -1,0 +1,110 @@
+.cta {
+  display: flex;
+  gap: 1rem;
+}
+.cta > .accent,
+.cta > .flat,
+.cta > .raised,
+.cta > .plain,
+.neutral {
+  padding: 0.4rem 2rem;
+  border-radius: 0.3rem;
+  transition: all 0.5s ease-in-out;
+  font-weight: bold;
+}
+.cta > .accent {
+  color: var(--background);
+  text-decoration: none;
+  background-color: var(--colorSecondary);
+  background-color: #a1adb7;
+  background-color: #d4dde5;
+  background: transparent;
+}
+.cta > .accent:hover {
+  color: #ffffff;
+}
+.cta > .raised {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #f73206;
+  background-color: var(--outlineColor);
+  border: 1px solid var(--outlineColor);
+}
+.cta > a:hover,
+.cta > a:active,
+.cta > button:hover,
+.cta > button:active {
+  background-color: #132a13;
+  transition: all 0.5s ease-in-out;
+}
+.cta > .accent:hover {
+}
+.cta > .flat {
+  background: var(--background);
+  border: 1px solid var(--outlineColor);
+  color: var(--outlineColor);
+  text-align: center;
+  text-decoration: none;
+}
+.cta > .flat:hover,
+.cta > .flat:active {
+  color: #ffffff;
+  background-color: var(--outlineColor);
+}
+.cta > .raised:hover {
+  background-color: #6a994e;
+  /* color: var(--outlineColor); */
+  border: 1px solid var(--outlineColor);
+}
+
+.cta > button {
+  border: 1px solid grey;
+  cursor: pointer;
+}
+
+.cta > button:disabled {
+  cursor: not-allowed;
+}
+
+.cta > .cornered {
+  background: transparent;
+  border-radius: 10rem;
+  border: 1px solid green;
+  color: var(--colorSecondary);
+  padding: 0.5rem 1rem;
+  transition: all 0.5s ease-in-out;
+}
+.cta > .cornered:hover {
+  background-color: var(--outlineColor);
+  border: 1px solid var(--outlineColor);
+  color: #ffffff;
+}
+
+.cta > .plain {
+  background: transparent;
+  border: 1px solid var(--foreground);
+  color: inherit;
+  display: inline-block;
+  text-align: center;
+  font-weight: normal;
+  color: var(--outlineColor);
+  text-decoration: none;
+}
+.cta > .plain:hover,
+.cta > .plain:active {
+  color: #ffffff;
+  background-color: var(--outlineColor);
+}
+.cta > .neutral {
+  background: var(--colorSecondary);
+  /* border: 1px solid var(--colorSecondary); */
+  color: var(--outlineColor);
+  text-align: center;
+  text-decoration: none;
+  font-weight: 500;
+}
+.cta > .neutral:hover,
+.cta > .neutral:active {
+  color: #ffffff;
+  background-color: var(--outlineColor);
+}

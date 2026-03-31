@@ -1,0 +1,114 @@
+.productEngagements {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: var(--background);
+  padding: 5rem clamp(1.5rem, 6vw, 7rem);
+  width: 100%;
+  color: var(--foreground);
+}
+
+.header {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.header > p {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #f4f2f5;
+  font-weight: 600;
+}
+
+.header > h1 {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  line-height: 1.3;
+  margin: 0;
+  margin-top: 0.5rem;
+}
+
+.engamenentContents {
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+  width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.engamenentContents > li {
+  list-style: none;
+  display: flex;
+  gap: 0;
+  flex-direction: column;
+  background-color: var(--background);
+  border-radius: 0.5rem;
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  width: 100%;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.engamenentContents > li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.engagementBottom {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.engagementBottom > h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.engagementBottom > p {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  opacity: 0.75;
+}
+
+.engagementBottom > a {
+  color: #06e81c;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  transition: opacity 0.2s;
+}
+
+.engagementBottom > a:hover {
+  opacity: 0.7;
+}
+
+.aboutImage {
+  position: relative;
+  min-height: 240px;
+  max-height: 280px;
+  overflow: hidden;
+}
+
+.aboutImage > img {
+  object-fit: cover;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .productEngagements {
+    padding: 3rem 1.5rem;
+  }
+  .engamenentContents {
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}

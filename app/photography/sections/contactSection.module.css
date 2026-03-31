@@ -1,0 +1,41 @@
+.ContactSectionMain {
+  background-color: var(--background);
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  padding: var(--paddingD);
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  width: 100%;
+  color: var(--foreground);
+}
+
+@media (max-width: 800px) {
+  .ContactSectionMain {
+    flex-direction: column;
+    gap: 2rem;
+    padding: var(--paddingM);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .contactLeft {
+    width: 100%;
+  }
+}
+@media (min-width: 800px) {
+  .ContactSectionMain {
+    justify-content: space-between;
+  }
+  .contactLeft {
+    width: 400px;
+    flex-direction: column;
+    display: flex;
+    gap: 1rem;
+    /* max-width: 40%; */
+  }
+  .contactRight {
+    margin-top: -10rem;
+    width: 60%;
+    z-index: 2;
+  }
+}

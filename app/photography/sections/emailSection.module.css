@@ -1,0 +1,57 @@
+.emailSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: #06061a;
+  padding: 5rem clamp(1.5rem, 6vw, 7rem);
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color: #f5f3ee;
+}
+
+.header {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.header > p {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #f7f4f9;
+  font-weight: 600;
+}
+
+.header > h1 {
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  line-height: 1.5;
+  margin: 0;
+  margin-top: 0.8rem;
+  opacity: 0.85;
+}
+
+.ctaBtn {
+  display: inline-block;
+  padding: 0.85rem 2rem;
+  background: #f0eef1;
+  color: #100101;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  border-radius: 0.3rem;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.ctaBtn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 800px) {
+  .emailSection {
+    padding: 4rem 1.5rem;
+  }
+}
