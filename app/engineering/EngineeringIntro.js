@@ -4,7 +4,7 @@ export default function EngineeringIntro() {
   return (
     <section className={classes.intro}>
       <div className={classes.content}>
-        <p className={classes.tag}>Division 02</p>
+        {/* <p className={classes.tag}>Division 02</p> */}
         <h1 className={classes.title}>
           COSENG Biogas <em>&amp; Engineering</em>
         </h1>

@@ -45,7 +45,7 @@
   font-family: 'Bebas Neue', sans-serif;
   font-size: 0.9rem;
   letter-spacing: 3px;
-  color: #c9a84c;
+  color: #4F772D;
   opacity: 0.7;
   margin-bottom: 1.5rem;
   position: relative;
@@ -54,8 +54,8 @@
 .heroTag {
   display: inline-block;
   border: 1px solid #c9a84c;
-  color: #c9a84c;
-  font-size: 0.75rem;
+  color: #dddcd8;
+  font-size: 1rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   padding: 0.35rem 0.9rem;
@@ -101,8 +101,8 @@
 }
 
 .btnPrimary {
-  background: #c9a84c;
-  color: #06061a;
+  background: #4F772D;
+  color: #f4f4f4;
   padding: 0.6rem 1.5rem;
   font-weight: 600;
   font-size: 0.75rem;
@@ -116,15 +116,15 @@
 }
 
 .btnPrimary:hover {
-  background: #e8c96d;
+  background:#4F772D;
   transform: translateY(-2px);
 }
 
 .btnOutline {
   border: 1px solid rgba(245,243,238,0.3);
-  color: #f5f3ee;
+  color: #f4f4f4;
   padding: 0.6rem 1.5rem;
-  font-size: 0.75rem;
+  font-size: 1rem;
   letter-spacing: 1px;
   text-transform: uppercase;
   text-decoration: none;
@@ -133,7 +133,7 @@
 }
 .btnOutline:hover {
   border-color: #c9a84c;
-  color: #c9a84c;
+  color: #f4f4f4;
   transform: translateY(-2px);
 }
 
@@ -154,7 +154,7 @@
 }
 
 .dotActive {
-  background: #c9a84c;
+  background: #4F772D;
   width: 24px;
   border-radius: 3px;
 }

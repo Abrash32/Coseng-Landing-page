@@ -93,10 +93,12 @@ export default function HomePageIntro() {
           left: 0,
           height: "2px",
           width: `${progressWidth}px`,
-          background: "#c9a84c",
+          background: "#4F772D",
           transition: "width 0.01s linear",
         }}
-      ></div>
+      >
+
+      </div>
 
       {/* Slide dots */}
       <div className={classes.slideDots}>

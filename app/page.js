@@ -4,6 +4,7 @@ import About from "@/components/homepage/homePageIntro/About";
 import WorkWithUs from "@/components/homepage/homePageIntro/WorkWithUs";
 import CosengSolutionSection from "@/components/homepage/homePageIntro/SolutionsSection";
 import ReviewsPage from "@/components/homepage/homePageIntro/ReviewsPage";
+import link from 'next/link';
 export default function Home() {
   return (
     <main>

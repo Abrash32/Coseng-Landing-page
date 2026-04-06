@@ -145,6 +145,10 @@ export default function CosengSolutionsSection() {
 ) : item.id === "engineering" ? (
   <Link href="/engineering" className={classes.cardHint} onClick={(e) => e.stopPropagation()}>
     Click to explore →
+  </Link>)
+   : item.id === "tech" ? (
+  <Link href="/TechConsult" className={classes.cardHint} onClick={(e) => e.stopPropagation()}>
+    Click to explore →
   </Link>
 ) : (
   <div className={classes.cardHint}>Click to explore →</div>

@@ -36,7 +36,7 @@
 
 .btnPrimary {
   display: inline-block;
-  background: #c9a84c;
+  background: #4f772d;
   color: #06061a;
   padding: 0.9rem 2rem;
   font-weight: 600;
@@ -50,7 +50,7 @@
 }
 
 .btnPrimary:hover {
-  background: #e8c96d;
+  background: #6ba736;
   transform: translateY(-2px);
 }
 

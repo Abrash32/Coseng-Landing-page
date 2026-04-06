@@ -41,11 +41,11 @@
 
 .navLinks a:hover {
   opacity: 1;
-  color: #c9a84c;
+  color: #4F772D;
 }
 
 .navCta {
-  background: #c9a84c;
+  background: #4F772D;
   color: #06061a;
   padding: 0.55rem 1.4rem;
   border-radius: 2px;
@@ -58,7 +58,7 @@
 }
 
 .navCta:hover {
-  background: #e8c96d;
+  background:  #4F772D;
 }
 
 /* Hamburger - mobile only */
