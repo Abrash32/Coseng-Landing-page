@@ -1,0 +1,49 @@
+.sideBarMenu {
+  min-width: 20%;
+  /* max-width: 25%; */
+  /* max-width: 30%; */
+  /* border-left: 1px solid rgba(0, 0, 0, 0.021); */
+  /* padding-left: 1rem; */
+}
+@media (min-width: 1000px) {
+  .sideBarMenu {
+    max-width: 25%;
+  }
+}
+.sideBarMenu > h3::after,
+.sideBarMenu > h3::before {
+  position: absolute;
+  content: "";
+  height: 3px;
+  margin-top: 1.7rem;
+}
+.sideBarMenu > h3::before {
+  width: 80px;
+  background-color: var(--colorRed);
+}
+.sideBarMenu > h3 {
+  /* margin-left: -1rem; */
+}
+.sideBarMenu > h3::after {
+  background-color: rgba(128, 128, 128, 0.11);
+  margin-left: -70px;
+  width: 200px;
+}
+
+.sideMenuLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+/* .sideMenuLinks > li {
+  list-style: none;
+  margin-left: 0.5rem;
+}
+.sideMenuLinks > li::before {
+  content: "\276F";
+  position: absolute;
+  margin-left: -1.5rem;
+  color: var(--colorRed);
+  font-weight: 10;
+} */

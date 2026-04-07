@@ -16,7 +16,7 @@ export default function About() {
           across Nigeria and the United Kingdom to help them grow, learn, and
           thrive.
         </p>
-        <a href="mailto:contact@coseng.co.uk" className={classes.btnPrimary}>
+        <a href="/contact" className={classes.btnPrimary}>
           Contact Us Today
         </a>
 

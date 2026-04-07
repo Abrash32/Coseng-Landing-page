@@ -43,8 +43,8 @@ export default function ContactForm() {
         <p className={classes.tag}>Contact Information</p>
         <h2 className={classes.title}>Reach <em>Us Directly</em></h2>
         <p className={classes.desc}>
-          We're based in the UK and work with clients across Nigeria and
-          internationally. Reach out and we'll get back to you within 24 hours.
+          We&apos;re based in the UK and work with clients across Nigeria and
+          internationally. Reach out and we&apos;ll get back to you within 24 hours.
         </p>
 
         <div className={classes.infoItems}>
@@ -87,7 +87,7 @@ export default function ContactForm() {
       <div className={classes.contactRight}>
         {submitted && (
           <div className={classes.successMsg}>
-            ✓ Message sent! We'll get back to you within 24 hours.
+            ✓ Message sent! We&apos;ll get back to you within 24 hours.
           </div>
         )}
 

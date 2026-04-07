@@ -1,0 +1,86 @@
+.about {
+  width: 100%;
+}
+
+.aboutPage {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 4rem clamp(1.5rem, 6vw, 7rem);
+  background: var(--deep);
+  color: var(--white);
+}
+
+.topAboutPage {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.topAboutPage > p {
+  max-width: 1000px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.aboutContents {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  grid-gap: 3rem;
+  margin-top: 2rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: var(--card-bg);
+  border: 1px solid rgba(201, 168, 76, 0.15); /* Gold translucent border */
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.content:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold);
+}
+
+.content > h2 {
+  font-size: 1.5rem;
+  color: var(--gold);
+  position: relative;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.content > p {
+  text-align: left;
+  line-height: 1.7;
+  color: var(--white);
+  opacity: 0.85;
+}
+
+.ourTeam {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 800px) {
+  .aboutPage {
+    padding: 3rem 1.5rem;
+  }
+  .aboutContents {
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
+  .content {
+    padding: 1.5rem;
+  }
+}
+

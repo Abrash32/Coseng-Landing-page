@@ -26,6 +26,8 @@
   display: flex;
   gap: 2rem;
   list-style: none;
+  margin-left: auto;
+  margin-right: 1.5rem;
 }
 
 .navLinks a {
@@ -110,6 +112,77 @@
 .mobileMenu li a:hover {
   opacity: 1;
   color: #c9a84c;
+}
+
+/* --- Dropdown Desktop Styling --- */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(6, 6, 26, 0.98);
+  min-width: 180px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 100;
+  border: 1px solid rgba(201, 168, 76, 0.15);
+  border-radius: 4px;
+  padding: 0.5rem 0;
+}
+
+.dropdownContent a {
+  color: #f5f3ee;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.dropdownContent a:hover {
+  background-color: rgba(201, 168, 76, 0.1);
+  color: #4F772D;
+}
+
+.dropdown:hover .dropdownContent {
+  display: block;
+}
+
+/* --- Dropdown Mobile Styling --- */
+.mobileDropdown {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobileDropbtn {
+  display: block;
+  padding: 0.9rem clamp(1.5rem, 6vw, 7rem);
+  color: #f5f3ee;
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.mobileDropdownContent {
+  list-style-type: none;
+  padding-left: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.mobileDropdownContent li a {
+  padding: 0.7rem clamp(1.5rem, 6vw, 7rem) !important;
+  padding-left: clamp(2.5rem, 8vw, 8rem) !important;
+  font-size: 0.85rem !important;
+  text-transform: capitalize !important;
+  color: #d1d1d1;
 }
 
 @media (max-width: 768px) {

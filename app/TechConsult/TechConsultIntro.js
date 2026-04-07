@@ -4,7 +4,7 @@ export default function TechConsultIntro() {
   return (
     <section className={classes.intro}>
       <div className={classes.content}>
-        <p className={classes.tag}>Division 01</p>
+        {/* <p className={classes.tag}>Division 01</p> */}
         <h1 className={classes.title}>
           COSENG Tech Consulting <em>&amp; Training</em>
         </h1>

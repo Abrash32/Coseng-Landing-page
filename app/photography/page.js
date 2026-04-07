@@ -1,7 +1,6 @@
 import BookNowIntroTop from "./bookNowIntroTop";
 import BookContactSection from "./contactSection";
 import About from "./sections/about";
-import IntroTop from "./sections/introTop";
 import Engagements from "./sections/engagements";
 import MoreOnProduct from "./sections/moreOnProduct";
 import ProductReviews from "./sections/productReviews";

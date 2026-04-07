@@ -1,0 +1,174 @@
+.teamMember {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  padding: 1.5rem;
+  border: 1px solid rgba(201, 168, 76, 0.15); /* Gold translucent border */
+  background: rgba(15, 15, 53, 0.6); /* --card-bg with opacity */
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  transition: all 0.4s ease;
+  height: fit-content;
+}
+
+.teamMember:hover {
+  transform: translateY(-5px);
+  border-color: rgba(201, 168, 76, 0.5);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.activeTeam {
+  border-color: var(--gold);
+  background: var(--card-bg);
+  box-shadow: 0 10px 30px rgba(201, 168, 76, 0.15);
+}
+
+.content > h2 {
+  font-size: 1.5rem;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.ourServices {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  grid-gap: 3rem;
+}
+
+.executiveTeam {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  grid-gap: 2.5rem;
+}
+
+.ourTeam {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (max-width: 800px) {
+  .executiveTeam,
+  .ourServices {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.teamSocialLinks {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.teamSocialLinks a {
+  color: var(--gold);
+  transition: color 0.3s ease;
+}
+
+.teamSocialLinks a:hover {
+  color: var(--white);
+}
+
+.topTeamSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1;
+  background-color: transparent;
+}
+
+.topTeamSection:focus,
+.topTeamSection:active,
+.topTeamSection::backdrop {
+  background: none;
+}
+
+.topTeamSection > p {
+  cursor: pointer;
+  width: 20px;
+  color: var(--white);
+  transition: color 0.3s ease;
+  font-size: 1.5rem;
+}
+
+.topTeamSection > p:hover {
+  color: var(--gold);
+}
+
+.teamProfile {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  height: fit-content;
+}
+
+.userIcon {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid rgba(201, 168, 76, 0.3); /* Subtle gold border */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: border-color 0.3s ease;
+}
+
+.activeTeam .userIcon {
+  border-color: var(--gold);
+}
+
+.userIcon > img {
+  object-fit: cover;
+  background-color: transparent;
+}
+
+.slowlyShowText h3,
+.slowlyShowText h4 {
+  color: var(--white);
+  font-size: 1.2rem;
+  margin-bottom: 0.2rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.activeTeam .slowlyShowText h3,
+.activeTeam .slowlyShowText h4 {
+  color: var(--gold);
+}
+
+.position {
+  color: var(--gold-light, #e8c96d);
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+@keyframes slowTopText {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bottomTeamSection {
+  transition: all 0.3s ease-in;
+  animation: slowTopText 0.4s ease-out forwards;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(201, 168, 76, 0.15); /* Separator line */
+  display: flex;
+  flex-direction: column;
+}
+
+.bottomTeamSection p {
+  color: var(--white);
+  opacity: 0.85;
+  line-height: 1.8;
+  font-size: 0.95rem;
+}

@@ -106,7 +106,7 @@ export default function TechConsultServices() {
                 </ul>
                 <button
                   className={classes.enquireBtn}
-                  onClick={() => window.location.href = "mailto:info@coseng.co.uk"}
+                  onClick={() => window.location.href = "/contact"}
                 >
                   Enquire Now
                 </button>

@@ -86,7 +86,7 @@ export default function Reviews() {
           >
             <div className={classes.stars}>{"★".repeat(review.stars)}</div>
             <p className={classes.reviewText}>
-              "{review.feedback.substring(0, 100)}..."
+              &ldquo;{review.feedback.substring(0, 100)}...&rdquo;
             </p>
             <div className={classes.reviewAuthor}>
               <div className={classes.authorAvatar}>
@@ -109,7 +109,7 @@ export default function Reviews() {
             Leave Us <em>Your Feedback</em>
           </h3>
           <p className={classes.feedbackDesc}>
-            We value every client's experience. Let us know how we did and
+            We value every client&apos;s experience. Let us know how we did and
             help others make informed decisions.
           </p>
         </div>
@@ -172,7 +172,7 @@ export default function Reviews() {
               {"★".repeat(modalReview.stars)}
             </div>
             <blockquote className={classes.modalQuote}>
-              "{modalReview.feedback}"
+              &ldquo;{modalReview.feedback}&rdquo;
             </blockquote>
             <div className={classes.modalAuthor}>
               <div className={classes.authorAvatar}>

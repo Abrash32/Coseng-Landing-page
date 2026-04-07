@@ -99,7 +99,7 @@ export default function BookContactSection() {
       <div className={classes.contactRight}>
         {submitted && (
           <div className={classes.successMsg}>
-            ✓ Booking request sent! We'll be in touch soon.
+            ✓ Booking request sent! We&apos;ll be in touch soon.
           </div>
         )}
         <form onSubmit={handleSubmit} className={classes.contactForm}>
