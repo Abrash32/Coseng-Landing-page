@@ -30,8 +30,8 @@ export default function ServiceAndExecutiveTeam({
 
   return (
     <section className={classes.ourTeam}>
-      <h2>{heading}</h2>
-      <p style={{ marginBottom: "1rem", textAlign: "justify" }}>{content}</p>
+      <h2 style={{ textAlign: "center", fontWeight: "bold", fontSize: "2rem", color: "#4F772D" }}>{heading}</h2>
+      <p style={{ marginBottom: "2rem", textAlign: "center", opacity: 0.9 }}>{content}</p>
       <ul
         className={
           type === "team" ? classes.executiveTeam : classes.ourServices

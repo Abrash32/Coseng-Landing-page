@@ -40,6 +40,12 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+
+#ci/cd
 eslint-output.json
+
+#check
 lint-check.txt
+
+#error
 lint-errors.txt

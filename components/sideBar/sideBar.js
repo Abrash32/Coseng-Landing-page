@@ -31,7 +31,7 @@ export default function SideBar({ linksArray, children }) {
   return (
     <main className="sideBar">
       {children}
-      <section className={classes.sideBarMenu}>
+      {/* <section className={classes.sideBarMenu}>
         <h3>Other Links</h3>
         <ul className={classes.sideMenuLinks}>
           {mainLinks.map((Olink) => (
@@ -40,7 +40,7 @@ export default function SideBar({ linksArray, children }) {
             </li>
           ))}
         </ul>
-      </section>
+      </section> */}
     </main>
   );
 }

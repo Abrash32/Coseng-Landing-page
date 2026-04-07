@@ -13,10 +13,10 @@ export default function Navbar() {
   <Link href="/">
   <div className={classes.logo}>
     <Image
-      src="/images/cosenglogo.png"
+      src="/images/cosenglogo6.png"
       alt="COSENG Logo"
       width={120}
-      height={40}
+      height={20}
       style={{ objectFit: "contain" }}
     />
   </div>
@@ -27,17 +27,19 @@ export default function Navbar() {
       <ul className={classes.navLinks}>
         <li><Link href="/">Home</Link></li>
         <li><Link href="#reviews">Reviews</Link></li>
-        <li><Link href="/about">About Us</Link></li>
+        
         <li className={classes.dropdown}>
           <Link href="#services" className={classes.dropbtn}>Services</Link>
           <div className={classes.dropdownContent}>
             <Link href="/TechConsult">Tech Consulting</Link>
             <Link href="/engineering">Engineering</Link>
+            <Link href="/property">Property Management</Link>
             <Link href="/photography">Photography</Link>
           </div>
         </li>
         {/* <li><Link href="#cta">Contact</Link></li> */}
         {/* <li><Link href="/contact">Contact</Link></li> */}
+        <li><Link href="/about">About Us</Link></li>
       </ul>
 
       {/* CTA Button */}
@@ -66,6 +68,7 @@ export default function Navbar() {
             <ul className={classes.mobileDropdownContent}>
               <li><Link href="/TechConsult" onClick={() => setMenuOpen(false)}>Tech Consulting</Link></li>
               <li><Link href="/engineering" onClick={() => setMenuOpen(false)}>Engineering</Link></li>
+              <li><Link href="/property" onClick={() => setMenuOpen(false)}>Property Management</Link></li>
               <li><Link href="/photography" onClick={() => setMenuOpen(false)}>Photography</Link></li>
             </ul>
           </li>

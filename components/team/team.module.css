@@ -4,7 +4,7 @@
   gap: 1rem;
   width: 100%;
   padding: 1.5rem;
-  border: 1px solid rgba(201, 168, 76, 0.15); /* Gold translucent border */
+  border: 1px solid rgba(79, 119, 45, 0.3); /* Green translucent border */
   background: rgba(15, 15, 53, 0.6); /* --card-bg with opacity */
   backdrop-filter: blur(8px);
   border-radius: 12px;
@@ -14,19 +14,19 @@
 
 .teamMember:hover {
   transform: translateY(-5px);
-  border-color: rgba(201, 168, 76, 0.5);
+  border-color: rgba(79, 119, 45, 0.8);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .activeTeam {
-  border-color: var(--gold);
+  border-color: #4F772D;
   background: var(--card-bg);
-  box-shadow: 0 10px 30px rgba(201, 168, 76, 0.15);
+  box-shadow: 0 10px 30px rgba(79, 119, 45, 0.2);
 }
 
 .content > h2 {
   font-size: 1.5rem;
-  color: var(--gold);
+  color: #4F772D;
   margin-bottom: 0.5rem;
   font-weight: 700;
 }
@@ -65,7 +65,7 @@
 }
 
 .teamSocialLinks a {
-  color: var(--gold);
+  color: #4F772D;
   transition: color 0.3s ease;
 }
 
@@ -97,7 +97,7 @@
 }
 
 .topTeamSection > p:hover {
-  color: var(--gold);
+  color: #4F772D;
 }
 
 .teamProfile {
@@ -111,13 +111,13 @@
   position: relative;
   overflow: hidden;
   border-radius: 50%;
-  border: 2px solid rgba(201, 168, 76, 0.3); /* Subtle gold border */
+  border: 2px solid rgba(79, 119, 45, 0.5); /* Subtle green border */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: border-color 0.3s ease;
 }
 
 .activeTeam .userIcon {
-  border-color: var(--gold);
+  border-color: #4F772D;
 }
 
 .userIcon > img {
@@ -136,11 +136,11 @@
 
 .activeTeam .slowlyShowText h3,
 .activeTeam .slowlyShowText h4 {
-  color: var(--gold);
+  color: #4F772D;
 }
 
 .position {
-  color: var(--gold-light, #e8c96d);
+  color: var(--white);
   font-size: 0.9rem;
   opacity: 0.9;
 }
@@ -161,7 +161,7 @@
   animation: slowTopText 0.4s ease-out forwards;
   margin-top: 1.5rem;
   padding-top: 1.5rem;
-  border-top: 1px solid rgba(201, 168, 76, 0.15); /* Separator line */
+  border-top: 1px solid rgba(79, 119, 45, 0.3); /* Separator line */
   display: flex;
   flex-direction: column;
 }
