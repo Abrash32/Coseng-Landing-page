@@ -1,6 +1,7 @@
 import { DM_Sans, DM_Serif_Display, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/homepage/homePageIntro/Navbar";
+import Footer from "@/components/homepage/footer/footer";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -34,6 +35,7 @@ export default function RootLayout({ children }) {
       <body className={`${dmSans.variable} ${dmSerif.variable} ${bebasNeue.variable}`}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
