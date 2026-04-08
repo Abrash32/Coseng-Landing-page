@@ -43,6 +43,7 @@ next-env.d.ts
 
 #ci/cd
 eslint-output.json
+eslint.config.mjs
 
 #check
 lint-check.txt

@@ -28,7 +28,7 @@ const slides = [
     tag: "Real Estate & Assets",
     title: <>Property & <span>Asset</span> Management</>,
     sub: "Short and long-term lettings, real estate investment mentorship, and property acquisition guidance for the UK market.",
-    primary: { label: "View Properties", href: "/property" },
+    // primary: { label: "View Properties", href: "/property" },
     outline: { label: "Enquire Now", href: "/contact" },
      image: "https://images.unsplash.com/photo-1580785692886-839ae39fc37c?q=80&w=1173&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },

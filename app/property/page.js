@@ -1,5 +1,5 @@
-import PropertyIntro from "./PropertyIntro";
-import PropertyServices from "./PropertyServices";
+// import PropertyIntro from "./PropertyIntro";
+// import PropertyServices from "./PropertyServices";
 
 export const metadata = {
   title: "Property & Asset Management - Coseng",
@@ -9,8 +9,8 @@ export const metadata = {
 export default function PropertyPage() {
   return (
     <main>
-      <PropertyIntro />
-      <PropertyServices />
+      {/* <PropertyIntro />
+      <PropertyServices /> */}
     </main>
   );
 }
