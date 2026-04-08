@@ -23,6 +23,9 @@ const bebasNeue = Bebas_Neue({
 export const metadata = {
   title: "COSENG Limited",
   description: "Empowering Businesses and Individuals",
+  icons: {
+    icon: "/images/icon.png",
+  },
 };
 
 export default function RootLayout({ children }) {

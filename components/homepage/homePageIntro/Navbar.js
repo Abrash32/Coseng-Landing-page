@@ -68,7 +68,7 @@ export default function Navbar() {
             <ul className={classes.mobileDropdownContent}>
               <li><Link href="/TechConsult" onClick={() => setMenuOpen(false)}>Tech Consulting</Link></li>
               <li><Link href="/engineering" onClick={() => setMenuOpen(false)}>Engineering</Link></li>
-              <li><Link href="/property" onClick={() => setMenuOpen(false)}>Property Management</Link></li>
+              {/* <li><Link href="/property" onClick={() => setMenuOpen(false)}>Property Management</Link></li> */}
               <li><Link href="/photography" onClick={() => setMenuOpen(false)}>Photography</Link></li>
             </ul>
           </li>
