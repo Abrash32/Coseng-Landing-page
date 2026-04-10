@@ -104,13 +104,26 @@ export default function TechConsultServices() {
                     <li key={i}>{bullet}</li>
                   ))}
                 </ul>
-                <button
-                  className={classes.enquireBtn}
-                  onClick={() => window.location.href = "/contact"}
-                >
-                  Enquire Now
-                </button>
-              </div>
+                
+{service.id === 1 ? (
+  <button
+    className={classes.enquireBtn}
+    onClick={() => window.location.href = "/services/training-services/data-analysis-training"}
+  >
+    Learn More
+  </button>
+) : (
+  <button
+    className={classes.enquireBtn}
+    onClick={() => window.location.href = "/contact"}
+  >
+    Enquire Now
+  </button>
+)}
+
+                
+             
+                            </div>
             )}
           </div>
         ))}

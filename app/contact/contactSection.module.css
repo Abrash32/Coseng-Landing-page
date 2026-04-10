@@ -1,0 +1,85 @@
+.ContactSectionMain,
+.allPagesContact {
+  background-color: var(--background);
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  padding: var(--paddingD);
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  width: 100%;
+  color: var(--foreground);
+  /* border: 1px solid var(--foreground); */
+}
+.allPagesContact {
+  /* padding: 3rem; */
+  padding: 0%;
+  border: none;
+}
+@media (max-width: 800px) {
+  .ContactSectionMain,
+  .allPagesContact {
+    flex-direction: column;
+    gap: 2rem;
+    padding: var(--paddingM);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .allPagesContact {
+    padding: 0rem;
+    border: none;
+    /* border-top: 1px solid var(--foreground); */
+    padding-top: 1rem;
+    margin-top: -1rem;
+  }
+  .contactLeft {
+    width: 100%;
+  }
+}
+@media (min-width: 800px) {
+  .ContactSectionMain,
+  .allPagesContact {
+    justify-content: space-between;
+  }
+  .contactLeft {
+    width: 40%;
+    flex-direction: column;
+    display: flex;
+    gap: 1rem;
+    /* max-width: 40%; */
+  }
+  .contactRight {
+    margin-top: 0rem;
+    width: 60%;
+    z-index: 2;
+    max-width: 700px;
+  }
+}
+.contactLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.photoBookingIcons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-content: first baseline;
+}
+.photoBookingIcons > div > div {
+  display: flex;
+  gap: 3rem;
+  width: 250px;
+  justify-content: space-between;
+}
+
+.photoBookingIcons > h1 {
+  background-color: var(--foreground);
+  color: var(--background);
+  padding: 0.2rem 0.7rem;
+  font-size: x-large;
+  height: fit-content;
+  padding-top: 0.5rem;
+  margin-top: 0.4rem;
+}

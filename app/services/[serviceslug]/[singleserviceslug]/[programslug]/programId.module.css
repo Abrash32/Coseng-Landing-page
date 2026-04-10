@@ -1,0 +1,18 @@
+@media (min-width: 800px) {
+  .registerForm {
+    padding: var(--paddingD);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .registerForm {
+    padding: var(--paddingM);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+.backToServicesBtn {
+  width: fit-content;
+}
