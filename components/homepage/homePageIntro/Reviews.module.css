@@ -322,6 +322,22 @@
 
 @media (max-width: 600px) {
   .reviewsGrid {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .reviewsGrid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .reviewCard {
+    flex: 0 0 85%;
+    scroll-snap-align: center;
   }
 }

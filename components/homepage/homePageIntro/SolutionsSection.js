@@ -108,7 +108,7 @@ export default function CosengSolutionsSection() {
   const [active, setActive] = useState(solutions[0]);
 
   return (
-    <section className={classes.solutionsSection}>
+    <section id="solutions-section" className={classes.solutionsSection}>
       <div className={classes.solutionsContainer}>
 
         {/* Header */}

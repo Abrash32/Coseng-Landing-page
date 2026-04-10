@@ -133,6 +133,33 @@ export default function HomePageIntro() {
           </Link>
         )}
       </div>
+
+      {/* Slide Navigation Arrows */}
+      <div className={classes.slideNav}>
+        <button
+          className={classes.navArrow}
+          onClick={() =>
+            setCurrentIndex((prev) =>
+              prev === 0 ? slides.length - 1 : prev - 1
+            )
+          }
+          aria-label="Previous slide"
+        >
+          ‹
+        </button>
+        <button
+          className={classes.navArrow}
+          onClick={() =>
+            setCurrentIndex((prev) =>
+              prev === slides.length - 1 ? 0 : prev + 1
+            )
+          }
+          aria-label="Next slide"
+        >
+          ›
+        </button>
+      </div>
+
     </section>
   );
 }
