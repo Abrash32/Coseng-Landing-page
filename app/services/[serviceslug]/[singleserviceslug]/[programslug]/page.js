@@ -101,7 +101,7 @@ export default async function ProgramCheckoutPage({ params }) {
         />
         <main className={classes.registerForm}>
           <div className={classes.backToServicesBtn}>
-            <Link href={`/services/${params.serviceslug}/${params.singleserviceslug}`}>
+            <Link href="/TechConsult">
               <div
                 style={{
                   display: "flex",
