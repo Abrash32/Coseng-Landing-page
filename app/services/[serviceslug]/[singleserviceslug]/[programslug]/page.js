@@ -6,11 +6,10 @@ import { revalidatePath } from "next/cache";
 import EnrollNowIntroTop from "./EnrollNowIntroTop";
 import EnrollFormSection from "./enrollFormSection";
 import Link from "next/link";
-import { Suspense } from "react";
-import Loading from "@/components/loading/loading";
 export async function generateMetadata({ params }) {
   const res = await fetch(
-    `https://www.coseng.co.uk/api/services/${params.serviceslug}`
+    `https://www.coseng.co.uk/api/services/${params.serviceslug}`,
+    { next: { revalidate: 3600 } }
   );
   const service = await res.json();
   if (!service || service.length <= 0) {
@@ -40,7 +39,8 @@ export async function generateMetadata({ params }) {
 
 export default async function ProgramCheckoutPage({ params }) {
   const res = await fetch(
-    `https://www.coseng.co.uk/api/services/${params.serviceslug}`
+    `https://www.coseng.co.uk/api/services/${params.serviceslug}`,
+    { next: { revalidate: 3600 } }
   );
 
   if (!res.ok) {
@@ -88,13 +88,7 @@ export default async function ProgramCheckoutPage({ params }) {
   const programID = `${singleService.category}-${singleServiceIndex}${programIndex}`;
   return (
     <section>
-      <Suspense
-        fallback={
-          <div style={{ marginTop: "30vh" }}>
-            <Loading message="Loading..." />
-          </div>
-        }
-      >
+      <div className={classes.wrapper}>
         <EnrollNowIntroTop
           caption={`${program?.cta} for the`}
           program={program?.name}
@@ -107,7 +101,7 @@ export default async function ProgramCheckoutPage({ params }) {
         />
         <main className={classes.registerForm}>
           <div className={classes.backToServicesBtn}>
-            <Link href=".">
+            <Link href={`/services/${params.serviceslug}/${params.singleserviceslug}`}>
               <div
                 style={{
                   display: "flex",
@@ -132,7 +126,7 @@ export default async function ProgramCheckoutPage({ params }) {
             singleService={singleService}
           />
         </main>
-      </Suspense>
+      </div>
     </section>
   );
 }

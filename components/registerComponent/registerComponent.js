@@ -1,5 +1,4 @@
 "use client";
-import theme from "@/app/MUITheme";
 import classes from "./registerComponent.module.css";
 import React, { useEffect, useState } from "react";
 import { useFormState } from "react-dom";
@@ -13,7 +12,6 @@ import {
   FormControl,
   Grid,
 } from "@mui/material";
-import { ThemeProvider } from "@emotion/react";
 import CtaButton from "../buttons/ctabuttonlink";
 import { GrStatusGood } from "react-icons/gr";
 import { RiErrorWarningLine } from "react-icons/ri";
@@ -196,7 +194,7 @@ export default function RegisterComponent({
   }
 
   return (
-    <ThemeProvider theme={theme}>
+    <>
       {(errorMessage?.split("").length > 0 || paymentStatus.status) && (
         <dialog className="dialog">
           <div
@@ -539,6 +537,6 @@ export default function RegisterComponent({
           {/* Social Media Links */}
         </Box>
       </section>
-    </ThemeProvider>
+    </>
   );
 }

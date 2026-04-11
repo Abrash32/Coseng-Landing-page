@@ -1,7 +1,5 @@
-import { Suspense } from "react";
 import classes from "./singleServicesPage.module.css";
 import { revalidatePath } from "next/cache";
-import Loading from "@/components/loading/loading";
 import SideBar from "@/components/sideBar/sideBar";
 import HeadedLists from "@/components/headedLists/headedLists";
 import SingleHeadedLists from "@/components/headedLists/singleHeadedLists";
@@ -13,7 +11,8 @@ import Link from "next/link";
 export async function generateMetadata({ params }) {
   const { serviceslug, singleserviceslug } = await params;
   const res = await fetch(
-    `https://www.coseng.co.uk/api/services/${serviceslug}`
+    `https://www.coseng.co.uk/api/services/${serviceslug}`,
+    { next: { revalidate: 3600 } }
   );
   const service = await res.json();
   if (!service || service.length <= 0) {
@@ -35,7 +34,8 @@ export async function generateMetadata({ params }) {
 async function GetSingleServiceDetail({ params }) {
   const { serviceslug, singleserviceslug } = await params;
   const res = await fetch(
-    `https://www.coseng.co.uk/api/services/${serviceslug}`
+    `https://www.coseng.co.uk/api/services/${serviceslug}`,
+    { next: { revalidate: 3600 } }
   );
   const service = await res.json();
   if (!service || service.length <= 0) {
@@ -57,7 +57,7 @@ async function GetSingleServiceDetail({ params }) {
  
   return (
     <main key={singleService.link} className={classes.singleServicePage}>
-      <Link href=".">
+      <Link href="/TechConsult">
         <div
           style={{
             display: "flex",
@@ -75,23 +75,53 @@ async function GetSingleServiceDetail({ params }) {
       </Link>
       <section className={classes.singleServiceTop}>
         <h2>{singleService.heading}</h2>
-        <p>{singleService.content}</p>
-        {singleService.levels && (
-          <SingleHeadedLists lists={singleService.levels} type="highlights" />
-        )}
-        {singleService.content2 && <p>{singleService.content2}</p>}
-        {singleService.content3 && <p>{singleService.content3}</p>}
+        <div className={classes.textContent}>
+          <p>{singleService.content}</p>
+          
+          {singleService.levels?.length > 0 && (
+            <div className={classes.levelsGrid}>
+              {singleService.levels.map((level) => (
+                <div key={level} className={classes.levelBadge}>
+                  {level}
+                </div>
+              ))}
+            </div>
+          )}
+          
+          {singleService.content2 && <p>{singleService.content2}</p>}
+          {singleService.content3 && <p>{singleService.content3}</p>}
+        </div>
       </section>
 
       <ProgramPricing
         singleService={singleService}
         serviceName={singleService.heading}
       />
-      {singleService.reasons?.length && (
-        <div>
-          <h3>{singleService.whyus}</h3>
-          <HeadedLists lists={singleService.reasons} />
-        </div>
+      {singleService.reasons?.length > 0 && (
+        <section className={classes.whyUsSection}>
+          <h3 className={classes.whyUsTitle}>{singleService.whyus}</h3>
+          <div className={classes.whyUsContentWrapper}>
+            <div className={classes.whyUsImageWrapper}>
+              <img 
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop" 
+                alt="Why Choose Us" 
+              />
+            </div>
+            <ul className={classes.whyUsList}>
+              {singleService.reasons.map((reason) => {
+                const [title, desc] = reason.split(":");
+                return (
+                  <li key={title} className={classes.whyUsListItem}>
+                    <div>
+                      <h4>{title}</h4>
+                      <p>{desc}</p>
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </section>
       )}
     </main>
   );
@@ -99,14 +129,6 @@ async function GetSingleServiceDetail({ params }) {
 
 export default async function Service({ params }) {
   return (
-    <Suspense
-      fallback={
-        <div style={{ marginTop: "30vh" }}>
-          <Loading message="Loading..." />
-        </div>
-      }
-    >
-      <GetSingleServiceDetail params={params} />
-    </Suspense>
+    <GetSingleServiceDetail params={params} />
   );
 }

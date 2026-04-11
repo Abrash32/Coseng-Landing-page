@@ -3,7 +3,7 @@ import classes from "./contactSection.module.css";
 import { FaLocationPin, FaRegClock } from "react-icons/fa6";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
-import ContactComponentForm from "./components/contactComponent/contact";
+import ContactComponentForm from "./ContactForm";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 export default function ContactSectionAllPages({ message }) {

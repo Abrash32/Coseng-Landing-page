@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 import classes from "./TechConsultServices.module.css";
 
 const services = [
@@ -50,7 +51,7 @@ const services = [
     title: "Business Analytics Consulting",
     short: "Transforming data into actionable insights.",
     desc: "Our business analytics consulting services help organizations leverage their data assets to drive strategic decision-making. We provide expert guidance on data strategy, implementation, and utilization to maximize the value of your analytics investments.",
-    icon: "�",
+    icon: "",
     bullets: [
       "Data Strategy Development",
       "Data Governance & Quality",
@@ -106,19 +107,21 @@ export default function TechConsultServices() {
                 </ul>
                 
 {service.id === 1 ? (
-  <button
+  <Link
     className={classes.enquireBtn}
-    onClick={() => window.location.href = "/services/training-services/data-analysis-training"}
+    href="/services/training-services/data-analysis-training"
+    style={{ display: "inline-block", textAlign: "center", textDecoration: "none" }}
   >
     Learn More
-  </button>
+  </Link>
 ) : (
-  <button
+  <Link
     className={classes.enquireBtn}
-    onClick={() => window.location.href = "/contact"}
+    href="/contact"
+    style={{ display: "inline-block", textAlign: "center", textDecoration: "none" }}
   >
     Enquire Now
-  </button>
+  </Link>
 )}
 
                 

@@ -33,7 +33,7 @@ export default function Navbar() {
           <div className={classes.dropdownContent}>
             <Link href="/TechConsult">Tech Consulting</Link>
             <Link href="/engineering">Engineering</Link>
-            <Link href="/property">Property Management</Link>
+            {/* <Link href="#property">Property Management</Link> */}
             <Link href="/photography">Photography</Link>
           </div>
         </li>
