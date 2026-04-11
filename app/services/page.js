@@ -4,20 +4,18 @@ import EachService from "../../components/eachservice/eachservice";
 import classes from "./page.module.css";
 import { Suspense } from "react";
 import Loading from "@/components/loading/loading";
-import { revalidatePath } from "next/cache";
+export const dynamic = "force-dynamic";
 
 async function fetchServices() {
   const res = await fetch("https://www.coseng.co.uk/api/services");
   const services = await res.json();
   return services;
 }
-export async function metadata(params) {
-  return {
-    title: "Our Service Portfolio - Coseng",
-    description:
-      "COSENG delivers comprehensive and dynamic services specializing in information technology, web design, CPD-certified trainings in Data Analytics, Business Analytics, and Project Management. ",
-  };
-}
+export const metadata = {
+  title: "Our Service Portfolio - Coseng",
+  description:
+    "COSENG delivers comprehensive and dynamic services specializing in information technology, web design, CPD-certified trainings in Data Analytics, Business Analytics, and Project Management. ",
+};
 export default async function Services() {
   const services = await fetchServices();
   if (services.length < 0) {

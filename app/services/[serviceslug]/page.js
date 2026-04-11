@@ -1,6 +1,8 @@
-import { revalidatePath } from "next/cache";
 import ServiceDetailsPage from "@/components/servicesComponent/service-details";
 import { notFound } from "next/navigation";
+
+export const dynamic = "force-dynamic";
+
 export async function generateMetadata({ params }) {
   const res = await fetch(
     `https://www.coseng.co.uk/api/services/${params.serviceslug}`,

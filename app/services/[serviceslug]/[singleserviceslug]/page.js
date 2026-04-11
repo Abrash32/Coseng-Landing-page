@@ -1,5 +1,5 @@
 import classes from "./singleServicesPage.module.css";
-import { revalidatePath } from "next/cache";
+export const dynamic = "force-dynamic";
 import SideBar from "@/components/sideBar/sideBar";
 import HeadedLists from "@/components/headedLists/headedLists";
 import SingleHeadedLists from "@/components/headedLists/singleHeadedLists";

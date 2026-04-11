@@ -53,3 +53,4 @@ lint-errors.txt
 
 #build log
 build_log.txt
+build_error.txt
