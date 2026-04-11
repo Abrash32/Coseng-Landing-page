@@ -2,35 +2,43 @@ import CtaButton from "@/components/buttons/ctabuttonlink";
 import classes from "./programId.module.css";
 import { IoChevronBackOutline } from "react-icons/io5";
 import RegisterComponent from "@/components/registerComponent/registerComponent";
-import { revalidatePath } from "next/cache";
 import EnrollNowIntroTop from "./EnrollNowIntroTop";
 import EnrollFormSection from "./enrollFormSection";
 import Link from "next/link";
+<<<<<<< HEAD
+=======
+import { Suspense } from "react";
+import Loading from "@/components/loading/loading";
+import { notFound } from "next/navigation";
+
+>>>>>>> ae2a57fd14bbbc289d20cfc65950a68220020f38
 export async function generateMetadata({ params }) {
+  const { serviceslug, singleserviceslug, programslug } = await params;
   const res = await fetch(
+<<<<<<< HEAD
     `https://www.coseng.co.uk/api/services/${params.serviceslug}`,
     { next: { revalidate: 3600 } }
+=======
+    `https://www.coseng.co.uk/api/services/${serviceslug}`
+>>>>>>> ae2a57fd14bbbc289d20cfc65950a68220020f38
   );
   const service = await res.json();
   if (!service || service.length <= 0) {
     notFound();
   }
-  const singleservicelink = params.serviceslug + "/" + params.singleserviceslug;
+  const singleservicelink = serviceslug + "/" + singleserviceslug;
   const singleService = service?.sections.filter(
     (currentSector) => currentSector.link === singleservicelink
   )[0];
   if (!singleService || singleService.length <= 0) {
     notFound();
   }
-  const programSlug = params.programslug;
   const program = singleService.programs.find(
-    (program) => program.slug === programSlug
+    (program) => program.slug === programslug
   );
-
   if (!program) {
     notFound();
   }
-
   return {
     title: `${program.name} - Coseng`,
     description: `Explore our ${program.name} service/program. We are happy to get you started`,
@@ -38,9 +46,15 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function ProgramCheckoutPage({ params }) {
+  const { serviceslug, singleserviceslug, programslug } = await params;
+  
   const res = await fetch(
+<<<<<<< HEAD
     `https://www.coseng.co.uk/api/services/${params.serviceslug}`,
     { next: { revalidate: 3600 } }
+=======
+    `https://www.coseng.co.uk/api/services/${serviceslug}`
+>>>>>>> ae2a57fd14bbbc289d20cfc65950a68220020f38
   );
 
   if (!res.ok) {
@@ -55,7 +69,7 @@ export default async function ProgramCheckoutPage({ params }) {
     );
   }
 
-  const singleservicelink = `${params.serviceslug}/${params.singleserviceslug}`;
+  const singleservicelink = `${serviceslug}/${singleserviceslug}`;
   const singleService = service?.sections.find(
     (currentSector) => currentSector.link === singleservicelink
   );
@@ -66,26 +80,26 @@ export default async function ProgramCheckoutPage({ params }) {
     );
   }
 
-  const programSlug = params.programslug;
-
   const program = singleService.programs.find(
-    (program) => program.slug === programSlug
+    (program) => program.slug === programslug
   );
 
   if (!program) {
     throw new Error(
-      "The program or resource you are looking for is not available. Gem"
+      "The program or resource you are looking for is not available."
     );
   }
+
   const singleServiceIndex =
     service.sections.findIndex(
-      (service) => service.slug === params.singleserviceslug
+      (service) => service.slug === singleserviceslug
     ) + (1).toString();
   const programIndex =
     singleService.programs.findIndex(
-      (program) => program.slug === programSlug
+      (program) => program.slug === programslug
     ) + 2?.toString();
   const programID = `${singleService.category}-${singleServiceIndex}${programIndex}`;
+
   return (
     <section>
       <div className={classes.wrapper}>
@@ -109,7 +123,6 @@ export default async function ProgramCheckoutPage({ params }) {
                   gap: "0.5rem",
                   alignItems: "center",
                   alignContent: "center",
-                  // padding: "0.5rem 0.2rem",
                   width: "fit-content",
                 }}
               >

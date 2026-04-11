@@ -1,0 +1,860 @@
+[
+  {
+    "_id": {
+      "$oid": "670a98b2963c0d331ef705f8"
+    },
+    "heading": "Software Technology Services",
+    "content": "At COSENG, we're not just web developers, we're digital architects crafting immersive online experiences for our clients. Our website design services are meticulously tailored to your unique brand identity and business objectives. Whether you're a start-up finding your digital footing or an established enterprise seeking to elevate your online presence, we have the expertise to transform your vision into reality. Your online presence is often the first impression you make on potential customers. In a world where digital experiences matter more than ever, having a captivating, user-friendly website is paramount. That's where we come in.",
+    "image": "/images/homepage/software.jpg",
+    "slug": "software-technology-services",
+    "sections": [
+      {
+        "heading": "Web Application Development",
+        "content": "Our Web Application Development services are aimed at creating responsive, secure, and feature-rich websites and applications tailored to meet the needs of businesses. From e-commerce platforms to complex enterprise applications, COSENG ensures that each web solution is optimized for performance, scalability, and user engagement. Whether you're looking to build a customer-facing application or an internal business tool, we use cutting-edge technologies to deliver reliable solutions.",
+        "content2": "Choose from our range of website design packages, each offering a blend of design excellence, functionality, and affordability. Whether you're starting small or aiming big, we have a package to suit your needs.",
+        "whyus": "Why Choose us",
+        "reasons": [
+          "Innovative Design: Our team of creative minds specializes in designing websites that not only look stunning but also engage and convert visitors into customers.",
+          "Custom Solutions: We understand that one size doesn't fit all. Our solutions are as unique as your business, ensuring your website stands out in the digital crowd.",
+          "User-Centric: User experience is at the core of our designs. We create websites that are intuitive, responsive, and optimized for every device.",
+          "SEO Excellence: We don't just design websites; we design websites that get noticed. Our SEO experts ensure your site ranks high on search engines.",
+          "Collaborative Approach: We believe in partnership. Your input and vision are invaluable, and we work closely with you to bring your ideas to life."
+        ],
+        "programs": [
+          {
+            "name": "Basic Package",
+            "description": "Ideal for individuals and small businesses taking their first step online",
+            "highlights": [
+              "Ideal for individuals and small businesses taking their first step online",
+              "Clean and professional design",
+              "Responsive design for mobile devices",
+              "Up to 5 pages (e.g., Home, About Us, Services, Contact, Blog)",
+              "Basic SEO optimization",
+              "Contact form integration",
+              "Googles Analytics 4 implementation and tracking on all pages"
+            ],
+            "duration": "",
+            "amount": "",
+            "cta": "Request Pricing"
+          },
+          {
+            "name": "Standard Package",
+            "description": "Perfect for growing businesses looking to establish a strong online presence.",
+            "highlights": [
+              "Perfect for growing businesses looking to establish a strong online presence",
+              "Customized design tailored to your brand",
+              "Responsive design for all devices",
+              "Up to 10 pages (e.g., Home, About Us, Services, Portfolio, Blog)",
+              "Advanced SEO optimization",
+              "Contact form and social media integration",
+              "Content management system (CMS) for easy updates",
+              "Googles Analytics 4 implementation and tracking on all pages"
+            ],
+            "duration": "",
+            "amount": "",
+            "cta": "Request Pricing"
+          },
+          {
+            "name": "E-commerce Package",
+            "description": "Tailored for businesses looking to sell products online.",
+            "highlights": [
+              "Tailored for businesses looking to sell products online",
+              "Customized e-commerce design",
+              "Responsive and user-friendly shopping cart",
+              "Product catalog setup (up to 100 products)",
+              "Payment gateway integration",
+              "Inventory management",
+              "Sales analytics and reporting",
+              "SEO for product pages",
+              "Googles Analytics 4 implementation and tracking on all pages"
+            ],
+            "duration": "",
+            "amount": "",
+            "cta": "Request Pricing"
+          },
+          {
+            "name": "Premium Package",
+            "description": "Designed for businesses seeking an impressive online presence with advanced features.",
+            "highlights": [
+              "Designed for businesses seeking an impressive online presence with advanced features",
+              "Unique and captivating design concepts",
+              "Fully responsive and mobile-friendly",
+              "Unlimited pages and custom functionality",
+              "Advanced SEO, analytics, and performance optimization",
+              "E-commerce integration (if needed)",
+              "Blog setup and content strategy",
+              "Social media integration, email marketing setup",
+              "Maintenance and support",
+              "Googles Analytics 4 implementation and tracking on all pages"
+            ],
+            "duration": "",
+            "amount": "",
+            "cta": "Request Pricing"
+          },
+          {
+            "name": "Custom Package",
+            "description": "For businesses with unique design and functionality requirements.",
+            "highlights": [
+              "For businesses with unique design and functionality requirements",
+              "Completely bespoke design and development",
+              "Tailored features and integrations",
+              "Comprehensive SEO and marketing strategy",
+              "Ongoing maintenance and support",
+              "Googles Analytics 4 implementation and tracking on all pages",
+              "Price varies based on project scope"
+            ],
+            "duration": "",
+            "amount": "",
+            "cta": "Request Pricing"
+          }
+        ],
+        "image": "https://example.com/images/web-application-development.jpg",
+        "link": "software-technology-services/web-application-development"
+      },
+      {
+        "heading": "Software Solutions",
+        "category": "service",
+        "slug": "software-solutions",
+        "content": "COSENG Software Solutions focus on developing custom software to enhance business operations. We understand that off-the-shelf software isn't always the perfect fit for every business. That's why we create tailored software solutions that streamline workflows, automate tasks, and integrate seamlessly with your existing systems. Our goal is to provide scalable solutions that evolve with your business needs.",
+        "image": "https://example.com/images/software-solutions.jpg",
+        "link": "software-technology-services/software-solutions"
+      },
+      {
+        "heading": "Mobile Application Development",
+        "category": "service",
+        "slug": "mobile-application-development",
+        "content": "Our Mobile Application Development services help businesses reach their audiences on the go. Whether you need a mobile app for customer engagement or internal operations, COSENG designs and develops mobile solutions that are user-friendly, responsive, and secure. We specialize in cross-platform apps that work seamlessly on both iOS and Android devices, ensuring that you can reach your customers wherever they are.",
+        "image": "https://example.com/images/mobile-application-development.jpg",
+        "link": "software-technology-services/mobile-application-development"
+      },
+      {
+        "heading": "Business Data Analytics Services",
+        "category": "service",
+        "slug": "business-data-analytics",
+        "content": "COSENG’s Business Data Analytics Services provide businesses with insights that drive better decision-making. We collect, process, and analyze data to help you understand customer behaviors, market trends, and operational performance. Our analytics services enable businesses to make data-driven decisions, optimize operations, and create strategies that foster growth.",
+        "programs": [
+          {
+            "name": "Basic Package",
+            "description": "Ideal for small projects and businesses new to data analysis.",
+            "highlights": [
+              "Data collection and cleaning",
+              "Descriptive statistics and basic visualizations",
+              "Basic report, summarizing findings"
+            ],
+            "duration": "1-2 weeks",
+            "amount": "£99",
+            "cta": "Order Now"
+          },
+          {
+            "name": "Standard Package",
+            "description": "Ideal for growing businesses and medium-sized projects requiring more detailed insights.",
+            "highlights": [
+              "Data preprocessing and transformation",
+              "Advanced statistical analysis (regression, correlations)",
+              "Custom data visualizations and interactive dashboards",
+              "Detailed report with actionable insights"
+            ],
+            "duration": "2-3 weeks",
+            "amount": "£149",
+            "cta": "Order Now"
+          },
+          {
+            "name": "Premium Package",
+            "description": "Ideal for enterprises and high-stakes projects needing advanced modeling and comprehensive insights",
+            "highlights": [
+              "Robust data manipulation and cleaning",
+              "Advanced modeling techniques (clustering, time series analysis)",
+              "Interactive visualizations with predictive analytics",
+              "Comprehensive report with executive-level summaries"
+            ],
+            "duration": "3-4 weeks",
+            "amount": "£249",
+            "cta": "Order Now"
+          }
+        ],
+        "image": "https://example.com/images/business-data-analytics.jpg",
+        "link": "software-technology-services/business-data-analytics"
+      },
+      {
+        "heading": "Project Management",
+        "category": "service",
+        "slug": "project-management",
+        "content": "COSENG's Project Management services ensure that your software development projects are completed on time and within budget. We manage every phase of the project lifecycle, from planning and execution to risk management and stakeholder communication. With our experienced team leading your project, you can focus on your core business while we ensure the successful delivery of your software solutions.",
+        "image": "https://example.com/images/project-management.jpg",
+        "link": "software-technology-services/project-management"
+      }
+    ],
+    "serviceList": [
+      "Web Application Development",
+      "Software Solutions",
+      "Mobile Application Development",
+      "Business Data analytics services",
+      "Project Management"
+    ],
+    "link": "/services/software-technology-services"
+  },
+  {
+    "_id": {
+      "$oid": "670a98b2963c0d331ef705f9"
+    },
+    "heading": "Training Services",
+    "category": "training",
+    "content": "COSENG Limited offers a comprehensive Web Design, Project Management, Data Analytics and Digital Marketing course designed to equip you with the essential skills needed to create and manage visually appealing, user-friendly websites. Whether you're a beginner or looking to enhance your existing skills, this course covers everything from foundational web technologies like HTML, CSS, and JavaScript to advanced digital marketing strategies, including SEO, social media, and e-commerce optimization. By the end of this course, you’ll be able to design professional-grade websites and execute effective digital marketing campaigns that drive business success.",
+    "image": "/images/homepage/learning.jpeg",
+    "slug": "training-services",
+    "sections": [
+      {
+        "heading": "Web Development",
+        "category": "training",
+        "slug": "web-development",
+        "content": "Our Web Development training program is designed for both beginners and experienced developers. Participants learn to create responsive, modern websites using HTML, CSS, JavaScript, and popular frameworks like React. We emphasize practical skills, ensuring that by the end of the course, you'll be able to build fully functional websites and manage web projects with confidence.",
+        "programs": [
+          {
+            "name": "Digital Marketing and Web Developement Career Path",
+            "description": "",
+            "highlights": [
+              "HTML, CSS, and JavaScript Basics",
+              "Mastering Google Sites",
+              "Web Design Techniques",
+              "UI/UX Design Principles",
+              "SEO Fundamentals",
+              "Conversion Rate Optimization (CRO)",
+              "CMS Proficiency (WordPress)",
+              "E-commerce Optimization",
+              "Digital Marketing Essentials",
+              "A 2-Week Live Project"
+            ],
+            "duration": "6 Weeks",
+            "amount": "£1500",
+            "cta": "Enroll Now",
+            "promotion": "Get 80% off at £300. Limited spots available. Enroll now!!!"
+          },
+          {
+            "name": "Advanced Web Developement Frontend Career Path",
+            "description": "",
+            "highlights": [
+              "React.js, TailWind CSS, Advanced React.js",
+              "HTML, CSS, and JavaScript Basics",
+              "Mastering Google Sites",
+              "Advanced Web Design Techniques",
+              "UI/UX Design Principles",
+              "SEO Fundamentals",
+              "Conversion Rate Optimization (CRO)",
+              "CMS Proficiency (WordPress)",
+              "E-commerce Optimization",
+              "Digital Marketing Essentials",
+              "A 4-Week Live Project"
+            ],
+            "duration": "8 Weeks",
+            "amount": "£2000",
+            "cta": "Enroll Now",
+            "promotion": "Get 80% off at £400. Limited spots available. Enroll now!!!"
+          }
+        ],
+        "whyus": "Why Choose us",
+        "reasons": [
+          "Experienced Instructors: Learn from industry professionals with extensive Web Development Experience.",
+          "Hands-On Approach: Our training is practical and project-based, ensuring you're job-ready.",
+          "Flexible Learning: Study at your own pace, with a mix of self-paced content and live sessions.",
+          "Real-World Projects: Apply what you've learned to real projects, building a strong portfolio.",
+          "Supportive Community: Connect with fellow learners, share insights, and seek guidance."
+        ],
+        "image": "https://example.com/images/web-development-training.jpg",
+        "link": "training-services/web-development"
+      },
+      {
+        "heading": "Data Analysis Training",
+        "category": "training",
+        "slug": "data-analysis-training",
+        "content": "COSENG Limited offers comprehensive data analytics training, providing learners with essential skills valued by employers. Our program includes the use of Excel, statistical analysis, data visualization with Power BI, and proficiency in Python and SQL. Our training programme covers:",
+        "levels": [
+          "Entry/beginners (fundamental)",
+          "Intermediate Level",
+          "Advanced Data Analytics"
+        ],
+        "content2": "Learners will gain expertise in data cleaning, machine learning, database management, and data mining. They will also develop critical thinking, collaboration, problem-solving, communication, and attention to detail for accurate analysis and effective stakeholder communication. Domain knowledge, project management, ethical considerations, and continuous learning are emphasized for enhanced employability in a data analytics career.",
+        "content3": "COSENG’s Data Analysis Training equips professionals with the skills needed to interpret and utilize data for business decision-making. Our comprehensive courses cover data visualization, statistical analysis, and predictive modeling, giving participants the ability to transform raw data into actionable insights. By the end of the training, you’ll be able to leverage data to improve processes and make informed decisions.",
+        "programs": [
+          {
+            "name": "Data Analytics Program",
+            "description": "",
+            "levels": ["Entry/beginners (fundamental)", "Intermediate Level"],
+            "highlights": [
+              "Excel for Data Analysis",
+              "Advanced Excel Features",
+              "Power BI for Data Visualization",
+              "2 weeks Live Projects",
+              "Free CV Building Support",
+              "Free Job interview preparations"
+            ],
+            "modules": [
+              {
+                "title": "Excel for Data Analysis",
+                "highlights": [
+                  "Introduction to Data Analysis: Basic concepts and methodologies",
+                  "Data Cleaning and Manipulation: Preparing and organizing data in Excel",
+                  "Power Query for Data Import and Transformation: Importing, cleaning, and transforming data from multiple sources",
+                  "Exploratory Data Analysis: Visualizations and basic statistical analysis"
+                ]
+              },
+              {
+                "title": "Advanced Excel Features",
+                "highlights": [
+                  "VLOOKUPs, PivotTables, and advanced charting",
+                  "Building data models with Power Pivot and creating reports."
+                ]
+              },
+              {
+                "title": "Power BI for Data Visualization",
+                "highlights": [
+                  "Power BI Basics: Introduction to Power BI and key features.",
+                  "Data Import and Transformation: Using Power Query for data preparation.",
+                  "DAX Functions: Custom calculations with DAX.",
+                  "Interactive Dashboards and Reporting: Designing dashboards and visual reports."
+                ]
+              },
+              {
+                "title": "2 weeks Live Projects",
+                "highlights": [
+                  "Students apply their knowledge to solve real-world problems using actual data and present their findings."
+                ]
+              }
+            ],
+            "duration": "6 weeks",
+            "amount": "£650",
+            "cta": "Enroll Now"
+          },
+          {
+            "name": " Advanced Data Analytics Program",
+            "description": "",
+            "levels": [
+              "Entry/beginners (fundamental)",
+              "Intermediate Level",
+              "Advanced Data Analytics"
+            ],
+            "highlights": [
+              "Excel for Data Analysis",
+              "Advanced Excel Features",
+              "Power BI for Data Visualization",
+              "SQL for Database Management",
+              "Python and Machine Learning",
+              "2 weeks Live Projects",
+              "Free Training on enhancing your presentation Skills",
+              "Free CV Building Support",
+              "Free Job interview preparations"
+            ],
+            "modules": [
+              {
+                "title": "Excel for Data Analysis",
+                "highlights": [
+                  "Introduction to Data Analysis: Basic concepts and methodologies",
+                  "Data Cleaning and Manipulation: Preparing and organizing data in Excel",
+                  "Power Query for Data Import and Transformation: Importing, cleaning, and transforming data from multiple sources",
+                  "Exploratory Data Analysis: Visualizations and basic statistical analysis"
+                ]
+              },
+              {
+                "title": "Advanced Excel Features",
+                "highlights": [
+                  "VLOOKUPs, PivotTables, and advanced charting",
+                  "Building data models with Power Pivot and creating reports."
+                ]
+              },
+              {
+                "title": "Power BI for Data Visualization",
+                "highlights": [
+                  "Power BI Basics: Introduction to Power BI and key features.",
+                  "Data Import and Transformation: Using Power Query for data preparation.",
+                  "DAX Functions: Custom calculations with DAX.",
+                  "Interactive Dashboards and Reporting: Designing dashboards and visual reports."
+                ]
+              },
+              {
+                "title": "SQL for Database Management",
+                "highlights": [
+                  "SQL Basics: Writing basic queries for data retrieval.",
+                  "Advanced SQL: Complex queries and ETL processes."
+                ]
+              },
+              {
+                "title": "Python and Machine Learning",
+                "highlights": [
+                  "Python Basics: Introduction to Python for data analysis.",
+                  "Machine Learning Fundamentals: Basics of machine learning using Python."
+                ]
+              },
+              {
+                "title": "3 weeks Live Projects",
+                "highlights": [
+                  "Students apply their knowledge to solve real-world problems using actual data and present their findings."
+                ]
+              }
+            ],
+            "duration": "4 Months",
+            "amount": "£1200",
+            "cta": "Enroll Now"
+          }
+        ],
+        "whyus": "Why Choose us",
+        "reasons": [
+          "Experienced Instructors: Learn from industry professionals with extensive data analysis experience.",
+          "Hands-On Approach: Our training is practical and project-based, ensuring you're job-ready.",
+          "Flexible Learning: Study at your own pace, with a mix of self-paced content and live sessions.",
+          "Real-World Projects: Apply what you've learned to real projects, building a strong portfolio.",
+          "Supportive Community: Connect with fellow learners, share insights, and seek guidance."
+        ],
+        "image": "https://example.com/images/data-analysis-training.jpg",
+        "link": "training-services/data-analysis-training"
+      },
+      {
+        "heading": "Project Management Training",
+        "category": "training",
+        "slug": "project-management-training",
+        "content": "COSENG offers specialized project management training courses designed to equip professionals with essential skills and tools for successful project delivery. Our comprehensive curriculum covers project planning, execution, risk management, stakeholder communication, and more. Take the next step in advancing your project management skills.",
+        "programs": [
+          {
+            "name": "Comprehensive Project Management Program",
+            "description": "Enroll in our specialized courses and gain the knowledge and expertise needed to excel in project management.",
+            "highlights": [
+              "Comprehensive Project Management Program",
+              "Free Training on enhancing your presentation Skills",
+              "Free CV Building Support",
+              "Free Job interview preparations"
+            ],
+            "modules": [
+              {
+                "title": "Project Management Fundamentals",
+                "highlights": [
+                  "Introduction to project management processes and project initiation.",
+                  "Definition of a project, roles & responsibilities of a project manager, and project constraints.",
+                  "Tools and techniques for project initiation and creating project documentation."
+                ]
+              },
+              {
+                "title": "Agile Project Management",
+                "highlights": [
+                  "Understanding agile methodologies and their applications in project management.",
+                  "Agile project planning, iterative delivery, and adapting to changing requirements.",
+                  "Implementing agile practices for improved project outcomes and stakeholder collaboration."
+                ]
+              },
+              {
+                "title": "PMP Certification Preparation",
+                "highlights": [
+                  "Preparation for the Project Management Professional (PMP) certification exam.",
+                  "Review of PMBOK (Project Management Body of Knowledge) concepts and processes.",
+                  "Practice exams, study materials, and guidance from certified instructors."
+                ]
+              }
+            ],
+            "duration": "10 weeks",
+            "amount": "£350",
+            "promotion": "We are offering a Students Discount. Hurry now and Enrol.",
+            "cta": "Enroll Now"
+          }
+        ],
+        "whyus": "Why Choose us",
+        "reasons": [
+          "Experienced Instructors: Learn from industry professionals with extensive data analysis experience.",
+          "Hands-On Approach: Our training is practical and project-based, ensuring you're job-ready.",
+          "Flexible Learning: Study at your own pace, with a mix of self-paced content and live sessions.",
+          "Real-World Projects: Apply what you've learned to real projects, building a strong portfolio.",
+          "Supportive Community: Connect with fellow learners, share insights, and seek guidance."
+        ],
+        "image": "https://example.com/images/training-human-development.jpg",
+        "link": "training-services/project-management-training"
+      },
+      {
+        "heading": "Entrepreneurship Mentoring",
+        "category": "training",
+        "slug": "entrepreneurship-mentoring",
+        "content": "COSENG’s Entrepreneurship Mentoring program provides guidance and support for individuals looking to start or grow their own businesses. We offer one-on-one mentoring, helping you develop business strategies, access funding, and overcome common entrepreneurial challenges. Our mentoring services are designed to equip you with the knowledge and confidence to succeed in the competitive business environment.",
+        "image": "https://example.com/images/entrepreneurship-mentoring.jpg",
+        "link": "training-services/entrepreneurship-mentoring"
+      }
+    ],
+    "serviceList": [
+      "Training and Human Development",
+      "Web Development",
+      "Data Analysis Training",
+      "Entrepreneurship Mentoring",
+      "Advocacy",
+      "Graduate Internship Programme",
+      "Graduate Advancement Programme"
+    ],
+    "link": "/services/training-services"
+  },
+  {
+    "_id": {
+      "$oid": "670a98b2963c0d331ef705fa"
+    },
+    "heading": "Business Data Analytics Services",
+    "content": "Welcome to COSENG's Business Analytics and Training program, designed to empower professionals with advanced analytics skills and strategic insights for data-driven decision-making. Whether you are new to business analytics or seeking to enhance your expertise, our comprehensive courses cover a wide range of topics to meet your learning objectives. Empower your organization with data-driven insights through specialized training programs.",
+    "image": "/images/homepage/data.jpg",
+    "slug": "business-data-analytics",
+    "sections": [
+      {
+        "heading": "Data Analysis Consulting ",
+        "category": "Service",
+        "slug": "data-analysis-consulting",
+        "content": "Unlock the full potential of your data with our expert solutions, designed to drive informed decision-making and foster business growth. At Coseng Limited, our team of seasoned data analysts is here to support you through every stage of your analytical journey. Our solutions are customized to address unique challenges across various industries, from retail to finance.",
+        "content2": "Explore our tailored packages, ranging from Basic to Premium, to find the perfect fit for your data needs. Whether you’re just starting or require advanced analysis, we have a solution that meets your requirements.",
+        "programs": [
+          {
+            "name": "Basic Package",
+            "description": "Ideal for small projects and businesses new to data analysis.",
+            "highlights": [
+              "Data collection and cleaning",
+              "Descriptive statistics and basic visualizations",
+              "Basic report, summarizing findings"
+            ],
+            "duration": "1-2 weeks",
+            "amount": "£99",
+            "cta": "Order Now"
+          },
+          {
+            "name": "Standard Package",
+            "description": "Ideal for growing businesses and medium-sized projects requiring more detailed insights.",
+            "highlights": [
+              "Data preprocessing and transformation",
+              "Advanced statistical analysis (regression, correlations)",
+              "Custom data visualizations and interactive dashboards",
+              "Detailed report with actionable insights"
+            ],
+            "duration": "2-3 weeks",
+            "amount": "£149",
+            "cta": "Order Now"
+          },
+          {
+            "name": "Premium Package",
+            "description": "Ideal for enterprises and high-stakes projects needing advanced modeling and comprehensive insights",
+            "highlights": [
+              "Robust data manipulation and cleaning",
+              "Advanced modeling techniques (clustering, time series analysis)",
+              "Interactive visualizations with predictive analytics",
+              "Comprehensive report with executive-level summaries"
+            ],
+            "duration": "3-4 weeks",
+            "amount": "£249",
+            "cta": "Order Now"
+          }
+        ],
+        "link": "business-data-analytics/data-analysis-consulting"
+      },
+      {
+        "heading": "Training Experts in Data Analytics for Business",
+        "category": "training",
+        "slug": "training-experts-in-data-analytics",
+        "programs": [
+          {
+            "name": "Business Data Analysis",
+            "description": "Take the next step in advancing your career with COSENG's Business Analytics Training. Join our upcoming sessions and gain the skills needed to thrive in today's data-driven business landscape.",
+            "highlights": [
+              "Data Analysis",
+              "Business Data Analysis",
+              "Free Training on enhancing your presentation Skills",
+              "Free CV Building Support",
+              "Free Job interview preparations"
+            ],
+            "modules": [
+              {
+                "title": "Introduction to Business Analytics",
+                "highlights": [
+                  "Understanding the fundamentals of business analytics",
+                  "Exploring data visualization techniques",
+                  "Introduction to statistical analysis for business insights"
+                ]
+              },
+              {
+                "title": "Data Visualization Techniques",
+                "highlights": [
+                  "Principles of effective data visualization",
+                  "Tools and techniques for creating impactful visualizations",
+                  "Interactive dashboards and storytelling with data"
+                ]
+              },
+              {
+                "title": "Advanced Analytics Applications",
+                "highlights": [
+                  "Predictive modeling and forecasting techniques",
+                  "Machine learning for business applications",
+                  "Optimization and decision-making using advanced analytics"
+                ]
+              },
+              {
+                "title": "Business Intelligence Tools",
+                "highlights": [
+                  "Overview of business intelligence (BI) concepts",
+                  "Introduction to BI tools such as Tableau, Power BI, and Qlik Sense",
+                  "Building interactive reports and dashboards"
+                ]
+              },
+              {
+                "title": "Data Analytics in Practice",
+                "highlights": [
+                  "Real-world case studies and applications of business analytics",
+                  "Hands-on exercises using industry datasets",
+                  "Best practices for data-driven decision-making"
+                ]
+              }
+            ],
+            "duration": "15 Weeks",
+            "amount": "£1100",
+            "cta": "Enroll Now",
+            "promotion": "Get 30% Discount. Limited spots available. Enroll now!!!"
+          }
+        ],
+        "whyus": "Why Choose us",
+        "reasons": [
+          "Experienced Instructors: Learn from industry professionals with extensive data analysis experience.",
+          "Hands-On Approach: Our training is practical and project-based, ensuring you're job-ready.",
+          "Flexible Learning: Study at your own pace, with a mix of self-paced content and live sessions.",
+          "Real-World Projects: Apply what you've learned to real projects, building a strong portfolio.",
+          "Supportive Community: Connect with fellow learners, share insights, and seek guidance."
+        ],
+        "content": "COSENG’s Training Experts in Data Analytics for Business course teaches professionals how to harness the power of data to make informed business decisions. The course covers key topics such as data collection, analysis, and visualization techniques. By the end of the training, participants will be equipped to analyze trends, forecast outcomes, and implement data-driven strategies within their organizations.",
+        "image": "https://example.com/images/training-data-analytics.jpg",
+        "link": "business-data-analytics/training-experts-in-data-analytics"
+      },
+      {
+        "heading": "Integrate Data-Driven Decisions in Your Organization",
+        "category": "service",
+        "slug": "integrate-data-driven-decisions",
+        "content": "COSENG helps organizations implement data-driven decision-making processes by integrating analytics tools and building a data-centric culture. Our services provide guidance on setting up data infrastructure, using advanced analytics tools, and training staff to interpret and act on insights derived from data. This empowers organizations to make smarter decisions that improve efficiency and competitiveness.",
+        "image": "https://example.com/images/data-driven-decisions.jpg",
+        "link": "business-data-analytics/integrate-data-driven-decisions"
+      },
+      {
+        "heading": "Data Forecasting and Interpretations",
+        "category": "service",
+        "slug": "data-forecasting",
+        "content": "COSENG offers specialized Data Forecasting and Interpretations services that help businesses anticipate market trends, customer behavior, and operational demands. Our forecasting models leverage historical data and advanced analytics to provide accurate predictions that guide business strategy. We help you stay ahead of the competition by enabling proactive decision-making.",
+        "image": "https://example.com/images/data-forecasting.jpg",
+        "link": "business-data-analytics/data-forecasting"
+      },
+      {
+        "heading": "Exploring AI and IoT to Optimize Business Operations",
+        "category": "service",
+        "slug": "exploring-ai-iot",
+        "content": "At COSENG, we help businesses explore the use of AI and IoT technologies to optimize operations. Our services include integrating AI-driven analytics and IoT solutions to provide real-time data and insights. These technologies can improve operational efficiency, reduce costs, and enable smarter decision-making. We focus on customizing solutions that align with your business needs and goals.",
+        "image": "https://example.com/images/ai-iot-business-optimization.jpg",
+        "link": "business-data-analytics/exploring-ai-iot"
+      }
+    ],
+    "serviceList": [
+      "Training experts in Data Analytics for business",
+      "Integrate Data Driven Decisions in your Organisation",
+      "Data Forcasting and Interpretaions",
+      "Exploring AI and IOT to Optimise Business Operations"
+    ],
+    "link": "/services/business-data-analytics"
+  },
+  {
+    "_id": {
+      "$oid": "670a98b2963c0d331ef705fb"
+    },
+    "heading": "Energy Support Services",
+    "content": "COSENG Limited is offering Biogas training and installations. Biogas is a renewable energy source that is produced by the breakdown of organic matter in the absence of oxygen. Our training program provides in-depth knowledge on how to set up and maintain biogas systems, covering both small-scale and industrial-scale installations. Whether you're interested in using biogas for home energy, farm applications, or large industrial purposes, our course will equip you with the skills needed to contribute to a sustainable energy future.",
+    "image": "/images/homepage/biogas.jpg",
+    "slug": "energy-support-services",
+    "sections": [
+      {
+        "heading": "Biogas System Installation",
+        "category": "service",
+        "slug": "biogas-system-installation",
+        "content": "COSENG’s Biogas System Installation service provides expert guidance and practical solutions for setting up biogas systems. We design and install customized biogas systems that convert organic waste into energy, helping businesses reduce waste management costs while producing renewable energy. Whether you're a farm, a food processing plant, or a household, we tailor our biogas solutions to meet your energy needs and sustainability goals.",
+        "image": "https://example.com/images/biogas-installation.jpg",
+        "link": "energy-support-services/biogas-system-installation"
+      },
+      {
+        "heading": "Biogas Training Program",
+        "category": "service",
+        "slug": "biogas-training-program",
+        "content": "COSENG offers a comprehensive Biogas Training Program that covers everything from the science behind biogas production to practical installation and maintenance of biogas systems. Our training is suitable for individuals and businesses looking to adopt biogas technology as a renewable energy solution. Participants will gain hands-on experience in setting up biogas digesters and learn how to troubleshoot common issues.",
+        "image": "https://example.com/images/biogas-training.jpg",
+        "link": "energy-support-services/biogas-training-program"
+      },
+      {
+        "heading": "Sustainability Consulting for Renewable Energy",
+        "category": "service",
+        "slug": "sustainability-consulting",
+        "content": "COSENG provides Sustainability Consulting services aimed at helping organizations reduce their environmental footprint through the adoption of renewable energy solutions. Our consulting services focus on biogas, solar, and other renewable energy technologies that promote sustainability and cost savings. We guide organizations through every step of the process, from feasibility assessments to implementation and long-term maintenance strategies.",
+        "image": "https://example.com/images/sustainability-consulting.jpg",
+        "link": "energy-support-services/sustainability-consulting"
+      },
+      {
+        "heading": "Energy Audits and Optimization",
+        "category": "service",
+        "slug": "energy-audits-optimization",
+        "content": "Our Energy Audits and Optimization services help businesses identify areas where energy efficiency can be improved. We assess energy consumption patterns and recommend strategies to reduce energy costs and improve sustainability. Our audits often reveal opportunities for integrating renewable energy sources like biogas, making your operations more eco-friendly and cost-effective.",
+        "image": "https://example.com/images/energy-audit.jpg",
+        "link": "energy-support-services/energy-audits-optimization"
+      }
+    ],
+    "serviceList": [
+      "Biogas System Installation",
+      "Biogas Training Program",
+      "Sustainability Consulting for Renewable Energy",
+      "Energy Audits and Optimization"
+    ],
+    "link": "/services/energy-support-services"
+  },
+  {
+    "_id": {
+      "$oid": "670a98b2963c0d331ef705fc"
+    },
+    "heading": "Asset and Facility Management Services",
+    "content": "COSENG Limited provides top-notch Asset and Facility Management services designed to maximize the value and longevity of your assets. From real estate and industrial facilities to critical infrastructure, our services ensure optimal performance through preventive maintenance, resource optimization, and risk mitigation strategies. We aim to deliver efficient and sustainable management solutions that meet the unique needs of each client.",
+    "image": "/images/homepage/assets.jpg",
+    "slug": "asset-and-facility-management",
+    "sections": [
+      {
+        "heading": "Preventive Maintenance Services",
+        "category": "service",
+        "slug": "preventive-maintenance",
+        "content": "COSENG’s Preventive Maintenance Services are designed to keep your assets in optimal condition, minimizing downtime and extending their lifespan. We use advanced monitoring techniques to detect issues before they become costly problems, ensuring that your facilities operate smoothly and efficiently. From HVAC systems to industrial machinery, we provide comprehensive maintenance plans tailored to your specific needs.",
+        "image": "https://example.com/images/preventive-maintenance.jpg",
+        "link": "asset-and-facility-management/preventive-maintenance"
+      },
+      {
+        "heading": "Asset Performance Optimization",
+        "category": "service",
+        "slug": "asset-performance-optimization",
+        "content": "Our Asset Performance Optimization services help you get the most out of your assets. Through data-driven insights, we identify areas where performance can be enhanced, whether it's through energy efficiency, resource allocation, or equipment upgrades. COSENG ensures that your assets operate at peak efficiency, reducing operational costs and increasing overall productivity.",
+        "image": "https://example.com/images/asset-performance-optimization.jpg",
+        "link": "asset-and-facility-management/asset-performance-optimization"
+      },
+      {
+        "heading": "Facility Management Consulting",
+        "category": "service",
+        "slug": "facility-management-consulting",
+        "content": "COSENG’s Facility Management Consulting services provide expert guidance on how to manage your facilities more efficiently. We offer strategic advice on everything from space utilization and resource management to energy efficiency and sustainability practices. Our goal is to help you create a more productive, cost-effective, and environmentally friendly facility management strategy.",
+        "image": "https://example.com/images/facility-management-consulting.jpg",
+        "link": "asset-and-facility-management/facility-management-consulting"
+      },
+      {
+        "heading": "Risk Mitigation and Compliance",
+        "category": "service",
+        "slug": "risk-mitigation-compliance",
+        "content": "COSENG helps businesses manage risks and ensure compliance with industry standards and regulations. Our Risk Mitigation and Compliance services include safety audits, regulatory assessments, and the development of emergency response plans. We work to protect your assets from potential hazards and ensure that your facility operations comply with all relevant legal and safety requirements.",
+        "image": "https://example.com/images/risk-mitigation.jpg",
+        "link": "asset-and-facility-management/risk-mitigation-compliance"
+      }
+    ],
+    "serviceList": [
+      "Preventive Maintenance Services",
+      "Asset Performance Optimization",
+      "Facility Management Consulting",
+      "Risk Mitigation and Compliance"
+    ],
+    "link": "/services/asset-and-facility-management"
+  },
+  {
+    "_id": {
+      "$oid": "670a98b2963c0d331ef705fd"
+    },
+    "heading": "Project Management services",
+    "content": "COSENG Limited offers professional Project Management services to ensure the successful completion of projects within scope, time, and budget. Our experienced project managers apply best practices and methodologies, such as Agile and Waterfall, to manage projects of any scale. We provide comprehensive services that include project planning, resource management, risk management, and stakeholder communication. Whether you're managing a construction project, IT initiative, or operational change, we have the expertise to lead your project to success.",
+    "image": "/images/homepage/project.jpg",
+    "slug": "project-management-services",
+    "sections": [
+      {
+        "heading": "Project Planning and Scheduling",
+        "category": "service",
+        "slug": "project-planning-scheduling",
+        "content": "COSENG’s Project Planning and Scheduling services ensure that your project stays on track from the very beginning. We work with clients to define project goals, create detailed schedules, and allocate resources efficiently. Our project managers ensure that each phase of the project is executed on time and within budget, while also anticipating and mitigating potential risks.",
+        "image": "https://example.com/images/project-planning.jpg",
+        "link": "project-management-services/project-planning-scheduling"
+      },
+      {
+        "heading": "Agile Project Management",
+        "category": "service",
+        "slug": "agile-project-management",
+        "content": "At COSENG, we apply Agile methodologies to project management, enabling faster delivery of project goals and enhanced flexibility in response to changing requirements. Our Agile Project Management services break down complex projects into manageable tasks, allowing teams to focus on delivering value at each stage. This approach is particularly useful for software development, but we also apply it to other industries to improve collaboration and efficiency.",
+        "image": "https://example.com/images/agile-project-management.jpg",
+        "link": "project-management-services/agile-project-management"
+      },
+      {
+        "heading": "Risk Management",
+        "category": "service",
+        "slug": "risk-management",
+        "content": "Risk Management is a core component of COSENG’s Project Management services. We identify potential risks early in the project lifecycle and develop strategies to mitigate them. Whether it’s financial, operational, or environmental risks, we have the tools and expertise to ensure that your project is protected from unforeseen challenges that could impact its success.",
+        "image": "https://example.com/images/risk-management.jpg",
+        "link": "project-management--services/risk-management"
+      },
+      {
+        "heading": "Stakeholder Management",
+        "category": "service",
+        "slug": "stakeholder-management",
+        "content": "Effective Stakeholder Management is key to the success of any project. COSENG works closely with all stakeholders to ensure that their needs are met and their concerns are addressed throughout the project lifecycle. We facilitate open communication, set clear expectations, and ensure that all stakeholders are aligned with the project goals and progress.",
+        "image": "https://example.com/images/stakeholder-management.jpg",
+        "link": "project-management-services/stakeholder-management"
+      },
+      {
+        "heading": "Project Management Training",
+        "category": "training",
+        "slug": "project-management-training",
+        "content": "COSENG offers specialized project management training courses designed to equip professionals with essential skills and tools for successful project delivery. Our comprehensive curriculum covers project planning, execution, risk management, stakeholder communication, and more. Take the next step in advancing your project management skills.",
+        "programs": [
+          {
+            "name": "Comprehensive Project Management Program",
+            "description": "Enroll in our specialized courses and gain the knowledge and expertise needed to excel in project management.",
+            "highlights": [
+              "Comprehensive Project Management Program",
+              "Free Training on enhancing your presentation Skills",
+              "Free CV Building Support",
+              "Free Job interview preparations"
+            ],
+            "modules": [
+              {
+                "title": "Project Management Fundamentals",
+                "highlights": [
+                  "Introduction to project management processes and project initiation.",
+                  "Definition of a project, roles & responsibilities of a project manager, and project constraints.",
+                  "Tools and techniques for project initiation and creating project documentation."
+                ]
+              },
+              {
+                "title": "Agile Project Management",
+                "highlights": [
+                  "Understanding agile methodologies and their applications in project management.",
+                  "Agile project planning, iterative delivery, and adapting to changing requirements.",
+                  "Implementing agile practices for improved project outcomes and stakeholder collaboration."
+                ]
+              },
+              {
+                "title": "PMP Certification Preparation",
+                "highlights": [
+                  "Preparation for the Project Management Professional (PMP) certification exam.",
+                  "Review of PMBOK (Project Management Body of Knowledge) concepts and processes.",
+                  "Practice exams, study materials, and guidance from certified instructors."
+                ]
+              }
+            ],
+            "duration": "10 weeks",
+            "amount": "£350",
+            "promotion": "We are offering a Students Discount. Hurry now and Enrol.",
+            "cta": "Enroll Now"
+          }
+        ],
+        "whyus": "Why Choose us",
+        "reasons": [
+          "Experienced Instructors: Learn from industry professionals with extensive data analysis experience.",
+          "Hands-On Approach: Our training is practical and project-based, ensuring you're job-ready.",
+          "Flexible Learning: Study at your own pace, with a mix of self-paced content and live sessions.",
+          "Real-World Projects: Apply what you've learned to real projects, building a strong portfolio.",
+          "Supportive Community: Connect with fellow learners, share insights, and seek guidance."
+        ],
+        "image": "https://example.com/images/training-human-development.jpg",
+        "link": "training-services/project-management-training"
+      }
+    ],
+    "serviceList": [
+      "Project Planning and Scheduling",
+      "Agile Project Management",
+      "Risk Management",
+      "Stakeholder Management"
+    ],
+    "link": "/services/project-management-services"
+  }
+]

@@ -15,7 +15,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 2rem;
+  gap: 4px;
 }
 .formFileds {
   width: 100%;
@@ -87,4 +87,21 @@
   .iframBackToForm {
     margin-top: 0rem;
   }
+}
+
+.contactForm :global(.MuiTextField-root) {
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+.contactForm :global(.MuiInputBase-input) {
+  color: #000000;
+}
+
+.contactForm :global(.MuiInputLabel-root) {
+  color: rgb(23, 23, 226);
+}
+
+.contactForm :global(.MuiOutlinedInput-notchedOutline) {
+  border-color: var(--gold);
 }

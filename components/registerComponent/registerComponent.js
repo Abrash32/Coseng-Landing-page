@@ -283,7 +283,7 @@ export default function RegisterComponent({
             <div className={classes.formFileds}>
               <h2>Register</h2>
 
-              <Grid item xs={12} md={2}>
+              <Grid xs={12} md={2}>
                 <form>
                   <div>
                     <TextField
