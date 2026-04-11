@@ -5,22 +5,12 @@ import RegisterComponent from "@/components/registerComponent/registerComponent"
 import EnrollNowIntroTop from "./EnrollNowIntroTop";
 import EnrollFormSection from "./enrollFormSection";
 import Link from "next/link";
-<<<<<<< HEAD
-=======
-import { Suspense } from "react";
-import Loading from "@/components/loading/loading";
 import { notFound } from "next/navigation";
-
->>>>>>> ae2a57fd14bbbc289d20cfc65950a68220020f38
 export async function generateMetadata({ params }) {
   const { serviceslug, singleserviceslug, programslug } = await params;
   const res = await fetch(
-<<<<<<< HEAD
-    `https://www.coseng.co.uk/api/services/${params.serviceslug}`,
+    `https://www.coseng.co.uk/api/services/${serviceslug}`,
     { next: { revalidate: 3600 } }
-=======
-    `https://www.coseng.co.uk/api/services/${serviceslug}`
->>>>>>> ae2a57fd14bbbc289d20cfc65950a68220020f38
   );
   const service = await res.json();
   if (!service || service.length <= 0) {
@@ -49,12 +39,8 @@ export default async function ProgramCheckoutPage({ params }) {
   const { serviceslug, singleserviceslug, programslug } = await params;
   
   const res = await fetch(
-<<<<<<< HEAD
-    `https://www.coseng.co.uk/api/services/${params.serviceslug}`,
+    `https://www.coseng.co.uk/api/services/${serviceslug}`,
     { next: { revalidate: 3600 } }
-=======
-    `https://www.coseng.co.uk/api/services/${serviceslug}`
->>>>>>> ae2a57fd14bbbc289d20cfc65950a68220020f38
   );
 
   if (!res.ok) {
