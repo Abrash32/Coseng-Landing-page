@@ -26,7 +26,6 @@ async function GetSingleServiceDetail({ params }) {
       "The page or resource you are looking for is not available."
     );
   }
-  revalidatePath("/services", "layout");
   return <ServiceDetailsPage {...service} key={service.slug} />;
 }
 

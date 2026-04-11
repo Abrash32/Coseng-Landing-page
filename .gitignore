@@ -50,3 +50,6 @@ lint-check.txt
 
 #error
 lint-errors.txt
+
+#build log
+build_log.txt

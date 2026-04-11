@@ -2,13 +2,17 @@ import Services from "@/app/services/page";
 import { MongoClient } from "mongodb";
 
 import { NextResponse } from "next/server";
+export const dynamic = "force-dynamic";
 
-const client = new MongoClient(process.env.MONGODB_URI);
 const dbName = "cosengwebsite";
 let db;
 
 async function connectToDb() {
   if (!db) {
+    if (!process.env.MONGODB_URI) {
+      throw new Error("MONGODB_URI environment variable is not defined");
+    }
+    const client = new MongoClient(process.env.MONGODB_URI);
     await client.connect();
     db = client.db(dbName); // Get the services database
   }

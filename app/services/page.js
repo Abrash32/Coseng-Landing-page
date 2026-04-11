@@ -19,7 +19,6 @@ export async function metadata(params) {
   };
 }
 export default async function Services() {
-  revalidatePath("/services", "layout");
   const services = await fetchServices();
   if (services.length < 0) {
     throw new Error("No Services Avaiable");

@@ -5,21 +5,21 @@ import { S3 } from "@aws-sdk/client-s3";
 import { NextResponse } from "next/server";
 import formidable from "formidable";
 import fs from "fs/promises"; // For file handling
+export const dynamic = "force-dynamic";
 
-const client = new MongoClient(process.env.MONGODB_URI);
 const dbName = "cosengwebsite";
 let db;
 
 async function connectToDb() {
   if (!db) {
+    if (!process.env.MONGODB_URI) {
+      throw new Error("MONGODB_URI environment variable is not defined");
+    }
+    const client = new MongoClient(process.env.MONGODB_URI);
     await client.connect();
     db = client.db(dbName); // Get the services database
   }
 }
-
-const s3 = new S3({
-  region: "eu-north-1",
-});
 
 async function parseFormData(request) {
   const form = formidable({ multiples: true });
@@ -57,6 +57,9 @@ export async function POST(request) {
       const fileName = `${service.slug}.${extension}`;
 
       // Upload the image to S3
+      const s3 = new S3({
+        region: "eu-north-1",
+      });
       const fileBuffer = await fs.readFile(imageFile.filepath); // Read the file buffer
       await s3.putObject({
         Bucket: "coseng-limited-website-2024-files-bucket",
