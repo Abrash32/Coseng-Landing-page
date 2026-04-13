@@ -1,6 +1,7 @@
 "use client";
-import { useState } from "react";
+import { useState, useActionState } from "react";
 import classes from "./Reviews.module.css";
+import { submitReviewForm } from "@/lib/submissionForms/submitReviewForm";
 
 const reviews = [
   {
@@ -43,24 +44,11 @@ const reviews = [
 
 export default function Reviews() {
   const [modalReview, setModalReview] = useState(null);
-  const [submitted, setSubmitted] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    company: "",
+  
+  const [state, formAction, isPending] = useActionState(submitReviewForm, {
+    status: "idle",
     message: "",
   });
-
-  function handleChange(e) {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  }
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    console.log("Submitted:", formData);
-    setSubmitted(true);
-    setFormData({ name: "", company: "", message: "" });
-    setTimeout(() => setSubmitted(false), 4000);
-  }
 
   return (
     <section className={classes.reviews}>
@@ -115,18 +103,22 @@ export default function Reviews() {
         </div>
 
         <div className={classes.feedbackRight}>
-          {submitted && (
+          {state.status === "successful" && (
             <div className={classes.successMsg}>
-              ✓ Thank you for your feedback!
+              ✓ {state.message}
             </div>
           )}
-          <form onSubmit={handleSubmit} className={classes.feedbackForm}>
+          {state.status === "failed" && (
+            <div className={`${classes.successMsg} ${classes.errorMsg}`} style={{ backgroundColor: '#fee2e2', color: '#991b1b', border: '1px solid #fecaca' }}>
+              ✕ {state.message}
+            </div>
+          )}
+          
+          <form action={formAction} className={classes.feedbackForm}>
             <input
               type="text"
               name="name"
               placeholder="Your Name"
-              value={formData.name}
-              onChange={handleChange}
               required
               className={classes.input}
             />
@@ -134,20 +126,16 @@ export default function Reviews() {
               type="text"
               name="company"
               placeholder="Company (Optional)"
-              value={formData.company}
-              onChange={handleChange}
               className={classes.input}
             />
             <textarea
               name="message"
               placeholder="Your Feedback"
-              value={formData.message}
-              onChange={handleChange}
               required
               className={classes.textarea}
             />
-            <button type="submit" className={classes.submitBtn}>
-              Submit Feedback
+            <button type="submit" className={classes.submitBtn} disabled={isPending}>
+              {isPending ? "Submitting..." : "Submit Feedback"}
             </button>
           </form>
         </div>

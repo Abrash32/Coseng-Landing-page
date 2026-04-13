@@ -1,43 +1,16 @@
 "use client";
-import { useState } from "react";
+import { useActionState } from "react";
 import classes from "./ContactForm.module.css";
+import { submitContactForm } from "@/lib/submissionForms/submitContactForm";
 
 export default function ContactForm() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    company: "",
-    service: "",
+  const [state, formAction, isPending] = useActionState(submitContactForm, {
+    status: "idle",
     message: "",
-    consent: false,
   });
-
-  const [submitted, setSubmitted] = useState(false);
-
-  function handleChange(e) {
-    const { name, type, checked, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: type === "checkbox" ? checked : value,
-    }));
-  }
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    console.log("Submitted:", formData);
-    setSubmitted(true);
-    setFormData({
-      name: "", email: "", phone: "",
-      company: "", service: "", message: "",
-      consent: false,
-    });
-    setTimeout(() => setSubmitted(false), 5000);
-  }
 
   return (
     <section className={classes.contactSection}>
-
       {/* Left — contact info */}
       <div className={classes.contactLeft}>
         <p className={classes.tag}>Contact Information</p>
@@ -85,36 +58,39 @@ export default function ContactForm() {
 
       {/* Right — form */}
       <div className={classes.contactRight}>
-        {submitted && (
+        {state.status === "successful" && (
           <div className={classes.successMsg}>
-            ✓ Message sent! We&apos;ll get back to you within 24 hours.
+            ✓ {state.message}
+          </div>
+        )}
+        {state.status === "failed" && (
+          <div className={`${classes.successMsg} ${classes.errorMsg}`} style={{ backgroundColor: '#fee2e2', color: '#991b1b', border: '1px solid #fecaca' }}>
+            ✕ {state.message}
           </div>
         )}
 
-        <form onSubmit={handleSubmit} className={classes.form}>
+        <form action={formAction} className={classes.form}>
           <h2 className={classes.formTitle}>Send Us a Message</h2>
 
           <div className={classes.formRow}>
             <div className={classes.formField}>
-              <label>Full Name</label>
+              <label htmlFor="name">Full Name</label>
               <input
                 type="text"
                 name="name"
+                id="name"
                 placeholder="Your Name"
-                value={formData.name}
-                onChange={handleChange}
                 required
                 className={classes.input}
               />
             </div>
             <div className={classes.formField}>
-              <label>Email Address</label>
+              <label htmlFor="email">Email Address</label>
               <input
                 type="email"
                 name="email"
+                id="email"
                 placeholder="Your Email"
-                value={formData.email}
-                onChange={handleChange}
                 required
                 className={classes.input}
               />
@@ -123,35 +99,32 @@ export default function ContactForm() {
 
           <div className={classes.formRow}>
             <div className={classes.formField}>
-              <label>Phone (Optional)</label>
+              <label htmlFor="phone">Phone (Optional)</label>
               <input
                 type="text"
                 name="phone"
+                id="phone"
                 placeholder="Phone Number"
-                value={formData.phone}
-                onChange={handleChange}
                 className={classes.input}
               />
             </div>
             <div className={classes.formField}>
-              <label>Company (Optional)</label>
+              <label htmlFor="company">Company (Optional)</label>
               <input
                 type="text"
                 name="company"
+                id="company"
                 placeholder="Company Name"
-                value={formData.company}
-                onChange={handleChange}
                 className={classes.input}
               />
             </div>
           </div>
 
           <div className={classes.formField}>
-            <label>Service Interested In</label>
+            <label htmlFor="service">Service Interested In</label>
             <select
               name="service"
-              value={formData.service}
-              onChange={handleChange}
+              id="service"
               className={classes.input}
             >
               <option value="">Select a service</option>
@@ -163,13 +136,16 @@ export default function ContactForm() {
             </select>
           </div>
 
+          {/* Hidden fields if needed by schema but not in UI */}
+          <input type="hidden" name="category" value="general" />
+          <input type="hidden" name="country" value="UK/Nigeria" />
+
           <div className={classes.formField}>
-            <label>Message</label>
+            <label htmlFor="message">Message</label>
             <textarea
               name="message"
+              id="message"
               placeholder="Tell us about your project or enquiry..."
-              value={formData.message}
-              onChange={handleChange}
               required
               className={classes.textarea}
             />
@@ -180,8 +156,7 @@ export default function ContactForm() {
               type="checkbox"
               name="consent"
               id="consent"
-              checked={formData.consent}
-              onChange={handleChange}
+              required
             />
             <label htmlFor="consent">
               I agree to the Terms of Use and Privacy Policy
@@ -191,13 +166,12 @@ export default function ContactForm() {
           <button
             type="submit"
             className={classes.submitBtn}
-            disabled={!formData.consent}
+            disabled={isPending}
           >
-            Send Message
+            {isPending ? "Sending..." : "Send Message"}
           </button>
         </form>
       </div>
-
     </section>
   );
 }

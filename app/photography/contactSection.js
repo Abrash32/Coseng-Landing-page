@@ -1,9 +1,10 @@
 "use client";
-import { useState } from "react";
+import { useActionState } from "react";
 import classes from "./contactSection.module.css";
 import { FaLocationPin, FaRegClock } from "react-icons/fa6";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
+import { submitPhotographyBookingForm } from "@/lib/submissionForms/submitPhotographyBookingForm";
 
 const servicesOffered = [
   "Graduation Coverage",
@@ -20,34 +21,10 @@ const servicesOffered = [
 ];
 
 export default function BookContactSection() {
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    email: "",
-    subject: "",
+  const [state, formAction, isPending] = useActionState(submitPhotographyBookingForm, {
+    status: "idle",
     message: "",
-    consent: false,
   });
-  const [submitted, setSubmitted] = useState(false);
-
-  function handleChange(e) {
-    const { name, type, checked, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: type === "checkbox" ? checked : value,
-    }));
-  }
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    console.log("Submitted:", formData);
-    setSubmitted(true);
-    setFormData({
-      name: "", phone: "", email: "",
-      subject: "", message: "", consent: false,
-    });
-    setTimeout(() => setSubmitted(false), 5000);
-  }
 
   return (
     <main className={classes.ContactSectionMain}>
@@ -97,35 +74,39 @@ export default function BookContactSection() {
       </div>
 
       <div className={classes.contactRight}>
-        {submitted && (
+        {state.status === "successful" && (
           <div className={classes.successMsg}>
-            ✓ Booking request sent! We&apos;ll be in touch soon.
+            ✓ {state.message}
           </div>
         )}
-        <form onSubmit={handleSubmit} className={classes.contactForm}>
+        {state.status === "failed" && (
+          <div className={`${classes.successMsg} ${classes.errorMsg}`} style={{ backgroundColor: '#fee2e2', color: '#991b1b', border: '1px solid #fecaca' }}>
+            ✕ {state.message}
+          </div>
+        )}
+
+        <form action={formAction} className={classes.contactForm}>
           <h2>Book Your Session</h2>
 
           <div className={classes.formRow}>
             <div className={classes.formField}>
-              <label>Name</label>
+              <label htmlFor="name">Name</label>
               <input
                 type="text"
                 name="name"
+                id="name"
                 placeholder="Your Name"
-                value={formData.name}
-                onChange={handleChange}
                 required
                 className={classes.input}
               />
             </div>
             <div className={classes.formField}>
-              <label>Phone (Optional)</label>
+              <label htmlFor="phone">Phone (Optional)</label>
               <input
                 type="text"
                 name="phone"
+                id="phone"
                 placeholder="Phone Number"
-                value={formData.phone}
-                onChange={handleChange}
                 className={classes.input}
               />
             </div>
@@ -133,23 +114,21 @@ export default function BookContactSection() {
 
           <div className={classes.formRow}>
             <div className={classes.formField}>
-              <label>Email</label>
+              <label htmlFor="email">Email</label>
               <input
                 type="email"
                 name="email"
+                id="email"
                 placeholder="Email Address"
-                value={formData.email}
-                onChange={handleChange}
                 required
                 className={classes.input}
               />
             </div>
             <div className={classes.formField}>
-              <label>Service</label>
+              <label htmlFor="subject">Service</label>
               <select
                 name="subject"
-                value={formData.subject}
-                onChange={handleChange}
+                id="subject"
                 required
                 className={classes.input}
               >
@@ -162,12 +141,11 @@ export default function BookContactSection() {
           </div>
 
           <div className={classes.formField}>
-            <label>Message</label>
+            <label htmlFor="message">Message</label>
             <textarea
               name="message"
+              id="message"
               placeholder="Tell us about your shoot..."
-              value={formData.message}
-              onChange={handleChange}
               required
               className={classes.textarea}
             />
@@ -178,8 +156,7 @@ export default function BookContactSection() {
               type="checkbox"
               name="consent"
               id="consent"
-              checked={formData.consent}
-              onChange={handleChange}
+              required
             />
             <label htmlFor="consent">
               I agree to the Terms of Use and Privacy Policy
@@ -189,9 +166,9 @@ export default function BookContactSection() {
           <button
             type="submit"
             className={classes.submitBtn}
-            disabled={!formData.consent}
+            disabled={isPending}
           >
-            Submit Booking
+            {isPending ? "Submitting..." : "Submit Booking"}
           </button>
         </form>
       </div>

@@ -1,37 +1,25 @@
-import Services from "@/app/services/page";
-import { MongoClient } from "mongodb";
-
+import { connectToDb } from "@/lib/mongodb";
 import { NextResponse } from "next/server";
+
 export const dynamic = "force-dynamic";
 
-const dbName = "cosengwebsite";
-let db;
-
-async function connectToDb() {
-  if (!db) {
-    if (!process.env.MONGODB_URI) {
-      throw new Error("MONGODB_URI environment variable is not defined");
-    }
-    const client = new MongoClient(process.env.MONGODB_URI);
-    await client.connect();
-    db = client.db(dbName); // Get the services database
-  }
-}
-
 export async function GET(request, { params }) {
-  let slug = params.serviceslug; // Get the slug from the URL
+  const { serviceslug } = await params;
 
   try {
-    await connectToDb();
+    const db = await connectToDb("cosengwebsite");
     const servicesCollection = db.collection("services");
+    
     // Fetch the service by slug
-    const service = await servicesCollection.findOne({ slug });
+    const service = await servicesCollection.findOne({ slug: serviceslug });
+    
     if (!service) {
       return NextResponse.json({ error: "Service not found" }, { status: 404 });
     }
 
-    return NextResponse.json(service); // Return the service as JSON
+    return NextResponse.json(service);
   } catch (error) {
+    console.error(`Failed to fetch service ${serviceslug}:`, error);
     return NextResponse.json(
       { error: "Failed to fetch service" },
       { status: 500 }
