@@ -7,24 +7,25 @@ import { notFound } from "next/navigation";
 import ProgramPricing from "@/components/programPricing/programPricing";
 import { IoChevronBackOutline } from "react-icons/io5";
 import Link from "next/link";
+import { getOneFromDatabase } from "@/lib/getFromDatabase";
 
 export async function generateMetadata({ params }) {
   const { serviceslug, singleserviceslug } = await params;
-  const res = await fetch(
-    `https://www.coseng.co.uk/api/services/${serviceslug}`,
-    { next: { revalidate: 3600 } }
-  );
-  const service = await res.json();
-  if (!service || service.length <= 0) {
+  const service = await getOneFromDatabase("services", { slug: serviceslug });
+  
+  if (!service) {
     notFound();
   }
-  const singleservicelink = serviceslug + "/" + singleserviceslug; // fixed
-  const singleService = service?.sections.filter(
+  
+  const singleservicelink = serviceslug + "/" + singleserviceslug;
+  const singleService = service?.sections?.find(
     (currentSector) => currentSector.link === singleservicelink
-  )[0];
-  if (!singleService || singleService.length <= 0) {
+  );
+  
+  if (!singleService) {
     notFound();
   }
+  
   return {
     title: `${singleService.heading} - Coseng`,
     description: `Explore our ${service.heading} portfolio. We are happy to get you started`,
@@ -33,23 +34,21 @@ export async function generateMetadata({ params }) {
 
 async function GetSingleServiceDetail({ params }) {
   const { serviceslug, singleserviceslug } = await params;
-  const res = await fetch(
-    `https://www.coseng.co.uk/api/services/${serviceslug}`,
-    { next: { revalidate: 3600 } }
-  );
-  const service = await res.json();
-  if (!service || service.length <= 0) {
+  const service = await getOneFromDatabase("services", { slug: serviceslug });
+  
+  if (!service) {
     throw new Error(
       "The page or resource you are looking for is not available."
     );
   }
+  
   const singleservicelink = serviceslug + "/" + singleserviceslug; 
 
-  const singleService = service?.sections.filter(
+  const singleService = service?.sections?.find(
     (currentSector) => currentSector.link === singleservicelink
-  )[0];
+  );
 
-  if (!singleService || singleService.length <= 0) {
+  if (!singleService) {
     throw new Error(
       "The page or resource you are looking for is not available."
     );
