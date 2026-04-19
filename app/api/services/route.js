@@ -16,6 +16,9 @@ const s3 = new S3({
 export async function GET() {
   try {
     const db = await connectToDb("cosengwebsite");
+     if (!db) {
+      return NextResponse.json({ error: "Database connection failed" }, { status: 500 });
+    }
     const servicesCollection = db.collection("services");
     const services = await servicesCollection.find({}).toArray();
 
@@ -81,6 +84,9 @@ export async function POST(request) {
 
     // 3. Save to MongoDB
     const db = await connectToDb("cosengwebsite");
+    if (!db) {
+      return NextResponse.json({ error: "Database connection failed" }, { status: 500 });
+    }
     const servicesCollection = db.collection("services");
     await servicesCollection.insertOne(service);
 

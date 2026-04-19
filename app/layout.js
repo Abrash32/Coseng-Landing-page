@@ -31,8 +31,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${dmSans.variable} ${dmSerif.variable} ${bebasNeue.variable}`}>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${dmSans.variable} ${dmSerif.variable} ${bebasNeue.variable}`} suppressHydrationWarning>
         <Navbar />
         {children}
         <Footer />
