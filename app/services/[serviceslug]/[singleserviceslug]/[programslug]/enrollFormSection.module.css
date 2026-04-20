@@ -1,14 +1,20 @@
 .ContactSectionMain {
-  background-color: var(--background);
   display: flex;
   flex-direction: row;
-  gap: 2rem;
-  padding: 3rem;
+  gap: 4rem;
+  padding: 4rem;
   width: 100%;
+  max-width: 1300px;
+  margin: 4rem auto;
   color: var(--foreground);
   justify-content: space-between;
-  border: 1px solid var(--foreground);
-  margin-top: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.5rem;
+  background: linear-gradient(135deg, rgba(6, 6, 26, 0.95) 0%, rgba(20, 20, 40, 0.85) 100%),
+              url('/images/homepage/data.jpg') no-repeat center center / cover;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+  position: relative;
+  overflow: hidden;
 }
 
 @media (max-width: 800px) {
@@ -40,28 +46,53 @@
 .contactLeft {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 .photoBookingIcons {
   display: flex;
   flex-direction: row;
-  gap: 1rem;
-  align-content: first baseline;
+  gap: 1.5rem;
+  align-items: flex-start;
 }
-.photoBookingIcons > div > div {
+
+.photoBookingIcons > div {
   display: flex;
-  gap: 3rem;
-  width: 230px;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.photoBookingIcons > div > h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.photoBookingIcons > div > p {
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
 }
 
 .photoBookingIcons > h1 {
-  background-color: var(--foreground);
-  color: var(--background);
-  padding: 0.2rem 0.7rem;
-  font-size: x-large;
-  height: fit-content;
-  padding-top: 0.5rem;
-  margin-top: 0.4rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--gold);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.8rem;
+  font-size: 1.5rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  transition: all 0.3s ease;
+}
+
+.photoBookingIcons:hover > h1 {
+  background: rgba(184, 134, 11, 0.15); /* Gold tint */
+  border-color: rgba(11, 184, 43, 0.5);
+  transform: translateY(-2px);
 }

@@ -37,9 +37,7 @@ async function GetSingleServiceDetail({ params }) {
   const service = await getOneFromDatabase("services", { slug: serviceslug });
   
   if (!service) {
-    throw new Error(
-      "The page or resource you are looking for is not available."
-    );
+    notFound();
   }
   
   const singleservicelink = serviceslug + "/" + singleserviceslug; 
@@ -49,9 +47,7 @@ async function GetSingleServiceDetail({ params }) {
   );
 
   if (!singleService) {
-    throw new Error(
-      "The page or resource you are looking for is not available."
-    );
+    notFound();
   }
  
   return (

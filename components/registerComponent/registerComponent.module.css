@@ -1,49 +1,58 @@
 .contactForm {
-  box-shadow: 1px 5px 25px rgba(128, 128, 128, 0.155);
-  background-color: var(--background);
-  color: var(--foreground);
-  padding: 2rem;
-  border-radius: 0.5rem;
+  background: rgba(10, 10, 26, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  color: #f5f3ee;
+  padding: 3rem;
+  border-radius: 1.25rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-@media (min-width: 800px) {
-  .contactForm {
-    border: 1px solid var(--foreground);
-  }
+
+.contactForm:hover {
+  box-shadow: 0 16px 50px 0 rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
+
 .formInnerSection {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 4px;
+  gap: 1rem;
 }
+
 .formFileds {
   width: 100%;
 }
-.formFileds > h1 {
-  font-size: xx-large;
-  margin: 2rem 0rem;
+
+.formFileds > h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  background: linear-gradient(90deg, #ffffff, var(--gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.5px;
 }
+
 .topFormInput {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   margin-bottom: 0.5rem;
 }
+
 .topFormInput > main > label {
   margin-top: 5rem;
 }
+
 @media (min-width: 1000px) {
   .formInnerSection {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-  }
-  .formFileds {
-    /* min-width: 30%;
-    max-width: 50%; */
-    /* margin: 0 auto; */
+    padding: 0;
   }
   .topInnerFormSection {
     display: flex;
@@ -58,19 +67,18 @@
     width: 50%;
   }
 }
+
 .iframePayment {
   scrollbar-width: 0px;
   width: 100%;
   height: 100%;
   overflow: hidden;
+  -ms-overflow-style: none;
 }
+
 .iframePayment::-webkit-scrollbar {
   width: 0px;
   display: none;
-}
-
-.iframePayment {
-  -ms-overflow-style: none;
 }
 
 .iframBackToForm {
@@ -82,26 +90,98 @@
   margin-right: auto;
   margin-top: 3rem;
   cursor: pointer;
+  color: var(--gold);
+  transition: opacity 0.2s ease;
 }
+
+.iframBackToForm:hover {
+  opacity: 0.8;
+}
+
 @media (min-width: 800px) {
   .iframBackToForm {
     margin-top: 0rem;
   }
 }
 
+/* Material UI Overrides for Dark Elegance */
+
 .contactForm :global(.MuiTextField-root) {
-  background-color: #ffffff;
-  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.contactForm :global(.MuiTextField-root:hover) {
+  background-color: rgba(255, 255, 255, 0.06);
 }
 
 .contactForm :global(.MuiInputBase-input) {
-  color: #000000;
+  color: #ffffff !important;
+  font-family: inherit;
+  padding: 15px 14px;
 }
 
 .contactForm :global(.MuiInputLabel-root) {
-  color: rgb(23, 23, 226);
+  color: rgba(255, 255, 255, 0.5) !important;
+  font-family: inherit;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+}
+
+.contactForm :global(.MuiInputLabel-root.Mui-focused) {
+  color: var(--gold) !important;
 }
 
 .contactForm :global(.MuiOutlinedInput-notchedOutline) {
-  border-color: var(--gold);
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  border-width: 1px !important;
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contactForm :global(.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline) {
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.contactForm :global(.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline) {
+  border-color: var(--gold) !important;
+  border-width: 2px !important;
+  box-shadow: 0 0 12px rgba(184, 134, 11, 0.15);
+}
+
+/* Fix text area text color */
+.contactForm :global(.MuiInputBase-inputMultiline) {
+  color: #ffffff !important;
+}
+
+/* Consent check section */
+:global(.consentSection) {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+:global(.consentSection) input[type="checkbox"] {
+  margin-top: 0.3rem;
+  accent-color: var(--gold);
+  width: 1.2rem;
+  height: 1.2rem;
+  cursor: pointer;
+}
+
+:global(.consentSection) a {
+  color: var(--gold);
+  text-decoration: none !important;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+:global(.consentSection) a:hover {
+  opacity: 0.8;
+  text-decoration: underline !important;
 }

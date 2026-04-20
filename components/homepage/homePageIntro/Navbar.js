@@ -15,8 +15,8 @@ export default function Navbar() {
     <Image
       src="/images/cosenglogo6.png"
       alt="COSENG Logo"
-      width={120}
-      height={20}
+      width={100}
+      height={10}
       style={{ objectFit: "contain" }}
     />
   </div>

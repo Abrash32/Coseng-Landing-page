@@ -2,85 +2,304 @@
   width: 100%;
 }
 
-.aboutPage {
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-  padding: 4rem clamp(1.5rem, 6vw, 7rem);
-  background: var(--deep);
-  color: var(--white);
+/* ═══════════════════════════════════════
+   FULL-WIDTH HORIZONTAL BANDS
+   ═══════════════════════════════════════ */
+
+.bandDark {
+  background: #06061a;
+  color: #f5f3ee;
+  width: 100%;
 }
 
-.topAboutPage {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+.bandLight {
+  background: #f5f3ee;
+  color: #06061a;
+  width: 100%;
 }
 
-.topAboutPage > p {
-  max-width: 1000px;
-  line-height: 1.6;
-  opacity: 0.9;
+.bandInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6rem clamp(1.5rem, 5vw, 4rem);
 }
 
-.aboutContents {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
-  grid-gap: 3rem;
-  margin-top: 2rem;
-}
+/* ═══════════════════════════════════════
+   LABEL / TAG
+   ═══════════════════════════════════════ */
 
-.content {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  background: var(--card-bg);
-  border: 1px solid rgba(79, 119, 45, 0.3); /* Green translucent border */
-  border-radius: 12px;
-  padding: 2rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.content:hover {
-  transform: translateY(-5px);
-  border-color: #4F772D;
-}
-
-.content > h2 {
-  font-size: 1.5rem;
-  color: #4F772D;
-  position: relative;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
+.label {
   display: inline-block;
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #4F772D;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
-.content > p {
-  text-align: left;
-  line-height: 1.7;
-  color: var(--white);
-  opacity: 0.85;
+.labelGold {
+  display: inline-block;
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #4f772d;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
-.ourTeam {
+/* ═══════════════════════════════════════
+   SPLIT SECTION  (Text | Image)
+   ═══════════════════════════════════════ */
+
+.splitSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  min-height: 420px;
+}
+
+.splitReverse {
+  direction: ltr;
+}
+
+.splitText {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
 }
 
-@media (max-width: 800px) {
-  .aboutPage {
-    padding: 3rem 1.5rem;
+.splitImage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.bandHeading {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.5px;
+}
+
+.bandBody {
+  font-size: 1rem;
+  line-height: 1.85;
+  opacity: 0.8;
+  margin-bottom: 1rem;
+  max-width: 540px;
+}
+
+/* ═══════════════════════════════════════
+   TWO COLUMN GRID
+   ═══════════════════════════════════════ */
+
+.twoColGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+/* Light variant */
+.gridItem {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem 0;
+  border-top: 3px solid #4F772D;
+}
+
+.gridHeading {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #06061a;
+  line-height: 1.25;
+  margin-bottom: 1.25rem;
+}
+
+.gridBody {
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: rgba(6, 6, 26, 0.72);
+  margin-bottom: 0.75rem;
+}
+
+/* Dark variant */
+.gridItemDark {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem 0;
+  border-top: 3px solid #0432e9;
+}
+
+.gridHeadingDark {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #f5f3ee;
+  line-height: 1.25;
+  margin-bottom: 1.25rem;
+}
+
+.gridBodyDark {
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: rgba(245, 243, 238, 0.72);
+  margin-bottom: 0.75rem;
+}
+
+/* ═══════════════════════════════════════
+   CENTERED INTROS
+   ═══════════════════════════════════════ */
+
+.centeredIntro {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.centeredHeading {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  color: #06061a;
+  margin-bottom: 1rem;
+}
+
+.centeredBody {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: rgba(6, 6, 26, 0.7);
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.centeredIntroDark {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.centeredHeadingDark {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  color: #f5f3ee;
+  margin-bottom: 1rem;
+}
+
+.centeredBodyDark {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: rgba(245, 243, 238, 0.7);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ═══════════════════════════════════════
+   THREE COLUMN VALUES GRID
+   ═══════════════════════════════════════ */
+
+.threeColGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.valueCard {
+  padding: 2rem 0;
+  border-top: 3px solid #4F772D;
+}
+
+.valueCard h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #06061a;
+  margin-bottom: 0.75rem;
+}
+
+.valueCard p {
+  font-size: 0.92rem;
+  line-height: 1.75;
+  color: rgba(6, 6, 26, 0.68);
+}
+
+/* ═══════════════════════════════════════
+   PRINCIPLES GRID (Numbered)
+   ═══════════════════════════════════════ */
+
+.principlesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  margin-top: 1rem;
+}
+
+.principleItem {
+  padding: 2rem 0;
+  border-top: 1px solid rgba(201, 168, 76, 0.25);
+}
+
+.principleNum {
+  display: inline-block;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #1dca40;
+  opacity: 0.35;
+  margin-bottom: 0.75rem;
+  line-height: 1;
+}
+
+.principleItem h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #f5f3ee;
+  margin-bottom: 0.6rem;
+}
+
+.principleItem p {
+  font-size: 0.92rem;
+  line-height: 1.75;
+  color: rgba(245, 243, 238, 0.65);
+}
+
+/* ═══════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════ */
+
+@media (max-width: 900px) {
+  .bandInner {
+    padding: 4rem 1.5rem;
   }
-  .aboutContents {
+
+  .splitSection {
     grid-template-columns: 1fr;
-    grid-gap: 2rem;
+    gap: 2.5rem;
+    min-height: auto;
   }
-  .content {
-    padding: 1.5rem;
+
+  .splitReverse .splitImage {
+    order: -1;
+  }
+
+  .splitImage {
+    min-height: 280px;
+  }
+
+  .twoColGrid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .threeColGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .principlesGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .bandHeading {
+    font-size: 1.8rem;
   }
 }
-

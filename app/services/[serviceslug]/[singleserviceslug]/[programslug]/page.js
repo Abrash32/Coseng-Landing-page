@@ -6,6 +6,8 @@ import EnrollNowIntroTop from "./EnrollNowIntroTop";
 import EnrollFormSection from "./enrollFormSection";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import slugify from "slugify";
+
 export async function generateMetadata({ params }) {
   const { serviceslug, singleserviceslug, programslug } = await params;
   const res = await fetch(
@@ -24,7 +26,7 @@ export async function generateMetadata({ params }) {
     notFound();
   }
   const program = singleService.programs.find(
-    (program) => program.slug === programslug
+    (program) => (program.slug || slugify(program.name, { lower: true })) === programslug
   );
   if (!program) {
     notFound();
@@ -50,9 +52,7 @@ export default async function ProgramCheckoutPage({ params }) {
   const service = await res.json();
 
   if (!service || service.length <= 0) {
-    throw new Error(
-      "The program or resource you are looking for is not available."
-    );
+    notFound();
   }
 
   const singleservicelink = `${serviceslug}/${singleserviceslug}`;
@@ -61,19 +61,15 @@ export default async function ProgramCheckoutPage({ params }) {
   );
 
   if (!singleService) {
-    throw new Error(
-      "The program or resource you are looking for is not available for this single service."
-    );
+    notFound();
   }
 
   const program = singleService.programs.find(
-    (program) => program.slug === programslug
+    (program) => (program.slug || slugify(program.name, { lower: true })) === programslug
   );
 
   if (!program) {
-    throw new Error(
-      "The program or resource you are looking for is not available."
-    );
+    notFound();
   }
 
   const singleServiceIndex =

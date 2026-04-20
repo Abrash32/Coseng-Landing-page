@@ -2,6 +2,8 @@
 import CtaButton from "../buttons/ctabuttonlink";
 import SingleHeadedLists from "../headedLists/singleHeadedLists";
 import classes from "./programPricing.module.css";
+import slugify from "slugify";
+
 export default async function ProgramPricing({ singleService, serviceName }) {
   return (
     <>
@@ -62,7 +64,7 @@ export default async function ProgramPricing({ singleService, serviceName }) {
                   type="link"
                   width="100%"
                   design="raised"
-                  action={`${singleService.slug}/${program.slug}`}
+                  action={`${singleService.slug}/${program.slug || slugify(program.name, { lower: true })}`}
                 >
                   {program.cta}
                 </CtaButton>
@@ -91,7 +93,7 @@ export default async function ProgramPricing({ singleService, serviceName }) {
                         type="link"
                         width="100%"
                         design="raised"
-                        action={`/${singleService.link}/${program.slug}`}
+                        action={`/${singleService.link}/${program.slug || slugify(program.name, { lower: true })}`}
                       >
                         {program.cta}
                       </CtaButton>

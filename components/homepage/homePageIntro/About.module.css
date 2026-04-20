@@ -11,7 +11,7 @@
   font-size: 0.75rem;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #c9a84c;
+  color: #4f772d;
   margin-bottom: 1rem;
 }
 
@@ -23,7 +23,7 @@
 }
 
 .sectionTitle em {
-  color: #c9a84c;
+  color: #4f772d;
   font-style: italic;
 }
 
@@ -69,7 +69,7 @@
 .statNum {
   font-size: 2rem;
   font-weight: 700;
-  color: #c9a84c;
+  color: #ebedea;
   line-height: 1;
   margin-bottom: 0.3rem;
 }
@@ -109,7 +109,7 @@
   bottom: -1.5rem;
   left: 50%;
   transform: translateX(-50%);
-  background: #c9a84c;
+  background: #4f772d;
   color: #06061a;
   padding: 1rem 1.5rem;
   border-radius: 4px;
