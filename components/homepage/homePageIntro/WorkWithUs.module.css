@@ -31,7 +31,9 @@
 }
 
 .ctaTag {
-  color: #09de69;
+  color: 
+#07bceae8
+;
   font-size: 0.85rem;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -47,7 +49,9 @@
 }
 
 .ctaTitle em {
-  color: #09de69;
+  color: 
+#07bceae8
+;
   font-style: italic;
 }
 
@@ -85,7 +89,7 @@
 }
 
 .ctaEmail a {
-  color: #c9a84c;
+  color: #f5f4f3;
   text-decoration: none;
 }
 

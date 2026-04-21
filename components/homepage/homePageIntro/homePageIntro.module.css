@@ -53,9 +53,11 @@
 
 .heroTag {
   display: inline-block;
-  border: 1px solid #c9a84c;
+  border: 1px solid 
+#07bceae8
+;
   color: #dddcd8;
-  font-size: 1rem;
+  font-size: 2rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   padding: 0.35rem 0.9rem;

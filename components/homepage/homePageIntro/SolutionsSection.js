@@ -67,7 +67,7 @@ export default async function CosengSolutionsSection() {
       id: "properties",
       title: "Properties",
       short: "Strategic property investment solutions.",
-      color: "#e8a234",
+      color: "#0a70ecff",
       dimColor: "rgba(232,162,52,0.12)",
       bgImage: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600&q=80",
       icon: "🏢",

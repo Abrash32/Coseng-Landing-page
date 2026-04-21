@@ -30,7 +30,9 @@
   font-size: 0.95rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #e8a234;
+  color: 
+#07bceae8
+;
   font-weight: 600;
 }
 
@@ -44,8 +46,8 @@
 .ctaBtn {
   display: inline-block;
   padding: 0.85rem 2rem;
-  background: #f8f7f9;
-  color: #020000;
+  background: #4f772d;
+  color: #f9f6f6;
   text-decoration: none;
   font-weight: 600;
   font-size: 0.85rem;

@@ -17,7 +17,7 @@ export default function About() {
           moments again and again.
         </p>
         <div className={classes.cta}>
-          <Link href="tel:+44762000004" className={classes.ctaButton}>
+          <Link href="/contact" className={classes.ctaButton}>
             CONTACT US TODAY
           </Link>
         </div>

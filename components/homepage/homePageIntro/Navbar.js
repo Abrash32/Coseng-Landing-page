@@ -13,7 +13,7 @@ export default function Navbar() {
   <Link href="/">
   <div className={classes.logo}>
     <Image
-      src="/images/cosenglogo6.png"
+      src="/images/cosenglogo1.png"
       alt="COSENG Logo"
       width={100}
       height={10}
