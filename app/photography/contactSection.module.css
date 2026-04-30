@@ -38,9 +38,8 @@
 }
 
 .photoBookingIcons h2 {
-  background-color: 
-#07bceae8
-;
+  background-color:
+    #07bceae8;
   color: #06061a;
   padding: 0.4rem 0.8rem;
   font-size: 1.2rem;
@@ -74,7 +73,7 @@
 .successMsg {
   background: rgba(44, 184, 122, 0.1);
   border: 1px solid rgba(44, 184, 122, 0.3);
-  color: #2cb87a;
+  color: #4f772d;
   padding: 0.8rem 1.2rem;
   border-radius: 4px;
   font-size: 0.88rem;
@@ -183,9 +182,11 @@
   .ContactSectionMain {
     flex-direction: column;
   }
+
   .contactLeft {
     width: 100%;
   }
+
   .formRow {
     grid-template-columns: 1fr;
   }

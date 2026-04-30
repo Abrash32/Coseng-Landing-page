@@ -95,7 +95,7 @@
 .successMsg {
   background: rgba(44, 184, 122, 0.1);
   border: 1px solid rgba(44, 184, 122, 0.3);
-  color: #2cb87a;
+  color: #4f772d;
   padding: 0.8rem 1.2rem;
   border-radius: 4px;
   font-size: 0.88rem;
@@ -205,9 +205,11 @@
     grid-template-columns: 1fr;
     gap: 4rem;
   }
+
   .contactRight {
     position: static;
   }
+
   .formRow {
     grid-template-columns: 1fr;
   }

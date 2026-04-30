@@ -44,7 +44,7 @@ export default async function CosengSolutionsSection() {
       id: "engineering",
       title: "Engineering",
       short: "Precision-driven engineering consultancy.",
-      color: "#2cb87a",
+      color: "#4f772d",
       dimColor: "rgba(44,184,122,0.12)",
       bgImage: "/images/homepage/biogas.jpg",
       icon: "🌿",
