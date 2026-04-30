@@ -13,7 +13,7 @@ export default function Navbar() {
   <Link href="/">
   <div className={classes.logo}>
     <Image
-      src="/images/cosenglogo1.png"
+      src="/images/LogoNewjj.png"
       alt="COSENG Logo"
       width={100}
       height={10}
@@ -26,7 +26,7 @@ export default function Navbar() {
       {/* Desktop links */}
       <ul className={classes.navLinks}>
         <li><Link href="/">Home</Link></li>
-        <li><Link href="#reviews">Reviews</Link></li>
+        <li><Link href="/reviews">Reviews</Link></li>
         
         <li className={classes.dropdown}>
           <Link href="#services" className={classes.dropbtn}>Services</Link>
@@ -61,7 +61,7 @@ export default function Navbar() {
       {menuOpen && (
         <ul className={classes.mobileMenu}>
           <li><Link href="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
-          <li><Link href="#reviews" onClick={() => setMenuOpen(false)}>Reviews</Link></li>
+          <li><Link href="/reviews" onClick={() => setMenuOpen(false)}>Reviews</Link></li>
           <li><Link href="#about" onClick={() => setMenuOpen(false)}>About</Link></li>
           <li className={classes.mobileDropdown}>
             <span className={classes.mobileDropbtn}>Services</span>

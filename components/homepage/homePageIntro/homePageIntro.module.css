@@ -53,9 +53,7 @@
 
 .heroTag {
   display: inline-block;
-  border: 1px solid 
-#07bceae8
-;
+  border: 1px solid #4f772d;
   color: #dddcd8;
   font-size: 2rem;
   letter-spacing: 2px;
@@ -78,7 +76,7 @@
   color: #f5f3ee;
 }
 .heroTitle span {
-  color: #05ef7e;
+  color: rgb(42, 125, 225);
   font-family: 'DM Serif Display', serif;
   font-style: italic;
 }
@@ -104,7 +102,7 @@
 
 .btnPrimary {
   background: #4F772D;
-  color: #f4f4f4;
+  color: #06061a;
   padding: 0.6rem 1.5rem;
   font-weight: 600;
   font-size: 0.75rem;
@@ -134,7 +132,7 @@
   transition: border-color 0.2s, transform 0.2s;
 }
 .btnOutline:hover {
-  border-color: #c9a84c;
+  border-color: #4f772d;
   color: #f4f4f4;
   transform: translateY(-2px);
 }

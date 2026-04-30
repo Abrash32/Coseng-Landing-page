@@ -18,7 +18,7 @@
   font-size: 0.75rem;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #c9a84c;
+  color: #4f772d;
 }
 
 .title {
@@ -29,7 +29,7 @@
 }
 
 .title em {
-  color: #c9a84c;
+  color: #4f772d;
   font-style: italic;
 }
 
@@ -68,7 +68,7 @@
   font-size: 0.8rem;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #c9a84c;
+  color: #faf9f6;
   margin-bottom: 0.3rem;
 }
 
@@ -153,7 +153,7 @@
 
 .input:focus,
 .textarea:focus {
-  border-color: #c9a84c;
+  border-color: #4f772d;
 }
 
 .input::placeholder,
@@ -175,7 +175,7 @@
 }
 
 .submitBtn {
-  background: #c9a84c;
+  background: #4f772d;
   color: #06061a;
   padding: 0.9rem 2rem;
   font-weight: 600;
@@ -190,7 +190,7 @@
 }
 
 .submitBtn:hover {
-  background: #e8c96d;
+  background: #f2f1ef;
   transform: translateY(-2px);
 }
 
