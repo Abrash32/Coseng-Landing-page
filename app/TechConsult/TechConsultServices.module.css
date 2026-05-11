@@ -12,7 +12,7 @@
   font-size: 0.75rem;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #2cb87a;
+  color: #4f772d;
   margin-bottom: 1rem;
 }
 
@@ -25,7 +25,7 @@
 }
 
 .title em {
-  color: #2cb87a;
+  color: #4f772d;
   font-style: italic;
 }
 
@@ -61,7 +61,7 @@
   left: 0;
   width: 3px;
   height: 0;
-  background: #2cb87a;
+  background: #4f772d;
   transition: height 0.4s ease;
 }
 
@@ -103,7 +103,7 @@
 
 .cardHint {
   font-size: 0.75rem;
-  color: #2cb87a;
+  color: #4f772d;
   letter-spacing: 1px;
   margin-top: 0.5rem;
 }
@@ -120,8 +120,15 @@
 }
 
 @keyframes expandIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .cardDesc {
@@ -149,12 +156,12 @@
   content: '';
   width: 20px;
   height: 1px;
-  background: #2cb87a;
+  background: #4f772d;
   flex-shrink: 0;
 }
 
 .enquireBtn {
-  background: #2cb87a;
+  background: #4f772d;
   color: #06061a;
   padding: 0.9rem 2rem;
   font-weight: 600;

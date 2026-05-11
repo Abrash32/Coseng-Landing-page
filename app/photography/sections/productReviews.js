@@ -3,37 +3,46 @@ import classes from "./productReviews.module.css";
 import { FaQuoteRight } from "react-icons/fa";
 import { useEffect, useState } from "react";
 
-export default function ProductReviews() {
+export default function ProductReviews({ initialReviews = [] }) {
+  const defaultArticles = [
+    {
+      name: "Jane D.",
+      review:
+        "COSENG captured every beautiful moment of our wedding. The photos are absolutely stunning, and I couldn’t be happier with the service. Highly recommend!",
+    },
+    {
+      name: "Mark T.",
+      review:
+        "The videography team did an amazing job at our corporate event. The highlights video was professional and perfectly captured the spirit of the day. Great job!",
+    },
+    {
+      name: "Samantha R.",
+      review:
+        "We loved the live streaming option! Our family abroad could join our celebration in real-time. COSENG made it easy and seamless.",
+    },
+    {
+      name: "Peter K.",
+      review:
+        "COSENG’s photographers are top-notch! They captured beautiful, candid moments at our family reunion, and the photos are memories we’ll cherish forever.",
+    },
+    {
+      name: "Olivia W.",
+      review:
+        "Their team was so professional and attentive to detail. Our corporate headshots turned out perfectly. Highly recommend them for any event!",
+    },
+  ];
+
+  const articles = initialReviews.length > 0
+    ? initialReviews.map(r => ({
+        name: r.name || "Anonymous",
+        review: r.feedback || r.review || "",
+      }))
+    : defaultArticles;
+
   const productReviews = {
     caption: "Authentic Feedback",
     heading: "Real Experiences, Honest Reviews",
-    articles: [
-      {
-        name: "Jane D.",
-        review:
-          "COSENG captured every beautiful moment of our wedding. The photos are absolutely stunning, and I couldn’t be happier with the service. Highly recommend!",
-      },
-      {
-        name: "Mark T.",
-        review:
-          "The videography team did an amazing job at our corporate event. The highlights video was professional and perfectly captured the spirit of the day. Great job!",
-      },
-      {
-        name: "Samantha R.",
-        review:
-          "We loved the live streaming option! Our family abroad could join our celebration in real-time. COSENG made it easy and seamless.",
-      },
-      {
-        name: "Peter K.",
-        review:
-          "COSENG’s photographers are top-notch! They captured beautiful, candid moments at our family reunion, and the photos are memories we’ll cherish forever.",
-      },
-      {
-        name: "Olivia W.",
-        review:
-          "Their team was so professional and attentive to detail. Our corporate headshots turned out perfectly. Highly recommend them for any event!",
-      },
-    ],
+    articles: articles,
   };
   const [reviews, setReviews] = useState(1);
   const [startIndex, setStartIndex] = useState(0);

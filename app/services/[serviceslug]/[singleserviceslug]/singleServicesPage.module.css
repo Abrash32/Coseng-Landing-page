@@ -7,6 +7,7 @@
   min-height: 100vh;
   color: #f5f3ee;
 }
+
 .singleServiceTop {
   display: flex;
   flex-direction: column;
@@ -23,6 +24,7 @@
   position: relative;
   overflow: hidden;
 }
+
 .singleServiceTop::before {
   content: '';
   position: absolute;
@@ -30,8 +32,9 @@
   left: 0;
   width: 100%;
   height: 4px;
-  background: linear-gradient(90deg, #2cb87a, transparent);
+  background: linear-gradient(90deg, #4f772d, transparent);
 }
+
 .singleServiceTop h2 {
   font-family: var(--font-serif);
   font-size: clamp(2.5rem, 5vw, 4rem);
@@ -39,6 +42,7 @@
   color: #f5f3ee;
   margin-bottom: 0.5rem;
 }
+
 .textContent {
   display: flex;
   flex-direction: column;
@@ -46,12 +50,14 @@
   max-width: 900px;
   text-align: left;
 }
+
 .textContent p {
   color: rgba(245, 245, 245, 0.9);
   font-size: 1.1rem;
   line-height: 1.8;
   margin: 0;
 }
+
 .levelsGrid {
   display: flex;
   flex-wrap: wrap;
@@ -59,10 +65,11 @@
   gap: 1rem;
   margin: 1rem 0;
 }
+
 .levelBadge {
   background: rgba(44, 184, 122, 0.15);
   border: 1px solid rgba(44, 184, 122, 0.5);
-  color: #2cb87a;
+  color: #4f772d;
   padding: 0.8rem 1.5rem;
   border-radius: 50px;
   font-weight: 600;
@@ -72,11 +79,13 @@
   gap: 0.5rem;
   transition: all 0.3s ease;
 }
+
 .levelBadge:hover {
   background: rgba(44, 184, 122, 0.25);
-  border-color: #2cb87a;
+  border-color: #4f772d;
   transform: translateY(-2px);
 }
+
 .levelBadge::before {
   content: '✓';
   font-weight: bold;
@@ -137,7 +146,10 @@
 .whyUsImageWrapper::after {
   content: '';
   position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   border: 2px solid rgba(44, 184, 122, 0.2);
   border-radius: 12px;
   pointer-events: none;
@@ -166,7 +178,7 @@
   top: 0.4rem;
   height: calc(100% - 0.8rem);
   width: 2px;
-  background: #2cb87a;
+  background: #4f772d;
   border-radius: 2px;
 }
 

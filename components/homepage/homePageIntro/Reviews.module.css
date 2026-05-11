@@ -12,7 +12,7 @@
   font-size: 0.75rem;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #7eb8f7;
+  color: #4f772d;
   margin-bottom: 1rem;
 }
 
@@ -25,7 +25,7 @@
 }
 
 .sectionTitle em {
-  color: #7eb8f7;
+  color: #4f772d;
   font-style: italic;
 }
 
@@ -43,7 +43,7 @@
 
 .reviewCard {
   background: #0a0a2e;
-  border: 1px solid rgba(126, 184, 247, 0.1);
+  border: 1px solid rgba(79, 119, 45, 0.14);
   border-radius: 4px;
   padding: 2rem;
   cursor: pointer;
@@ -56,27 +56,30 @@
 }
 
 .reviewCard::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 3px;
   height: 0;
-  background: #7eb8f7;
+  background: #4f772d;
   transition: height 0.4s ease;
 }
 
-.reviewCard:hover {
-  border-color: rgba(126, 184, 247, 0.4);
+.reviewCard:hover,
+.reviewCard:focus-visible {
+  border-color: rgba(79, 119, 45, 0.4);
   transform: translateY(-4px);
+  outline: none;
 }
 
-.reviewCard:hover::before {
+.reviewCard:hover::before,
+.reviewCard:focus-visible::before {
   height: 100%;
 }
 
 .stars {
-  color: #7eb8f7;
+  color: #4f772d;
   font-size: 1rem;
   letter-spacing: 2px;
 }
@@ -88,7 +91,8 @@
   flex: 1;
 }
 
-.reviewAuthor {
+.reviewAuthor,
+.modalAuthor {
   display: flex;
   align-items: center;
   gap: 0.8rem;
@@ -99,24 +103,26 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: rgba(126, 184, 247, 0.1);
-  border: 1px solid rgba(126, 184, 247, 0.3);
+  background: rgba(79, 119, 45, 0.1);
+  border: 1px solid rgba(79, 119, 45, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: var(--font-serif);
   font-size: 1.1rem;
-  color: #7eb8f7;
+  color: #4f772d;
   flex-shrink: 0;
 }
 
-.reviewAuthor strong {
+.reviewAuthor strong,
+.modalAuthor strong {
   display: block;
   font-size: 0.9rem;
   color: #f5f3ee;
 }
 
-.reviewAuthor span {
+.reviewAuthor span,
+.modalAuthor span {
   font-size: 0.75rem;
   color: rgba(245, 243, 238, 0.4);
   letter-spacing: 1px;
@@ -129,7 +135,7 @@
   align-items: start;
   margin-top: 6rem;
   padding-top: 5rem;
-  border-top: 1px solid rgba(126, 184, 247, 0.1);
+  border-top: 1px solid rgba(79, 119, 45, 0.16);
 }
 
 .feedbackTitle {
@@ -142,7 +148,7 @@
 }
 
 .feedbackTitle em {
-  color: #7eb8f7;
+  color: #4f772d;
   font-style: italic;
 }
 
@@ -163,9 +169,9 @@
   width: 100%;
   padding: 0.9rem 1.2rem;
   background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(126, 184, 247, 0.15);
+  border: 1px solid rgba(79, 119, 45, 0.2);
   border-radius: 4px;
-  color: #f5f3ee;
+  color: #079bf1;
   font-size: 0.9rem;
   font-family: var(--font-body);
   outline: none;
@@ -174,7 +180,7 @@
 
 .input:focus,
 .textarea:focus {
-  border-color: #7eb8f7;
+  border-color: #4f772d;
 }
 
 .input::placeholder,
@@ -207,14 +213,25 @@
   transform: translateY(-2px);
 }
 
+.submitBtn:disabled {
+  cursor: progress;
+  opacity: 0.72;
+}
+
 .successMsg {
-  background: rgba(126, 184, 247, 0.1);
-  border: 1px solid rgba(126, 184, 247, 0.3);
-  color: #7eb8f7;
+  background: rgba(79, 119, 45, 0.1);
+  border: 1px solid rgba(79, 119, 45, 0.3);
+  color: #6ba736;
   padding: 0.8rem 1.2rem;
   border-radius: 4px;
   font-size: 0.88rem;
   margin-bottom: 1rem;
+}
+
+.errorMsg {
+  background: rgba(153, 27, 27, 0.16);
+  border-color: rgba(254, 202, 202, 0.45);
+  color: #fecaca;
 }
 
 .overlay {
@@ -237,7 +254,7 @@
 
 .modal {
   background: #0a0a2e;
-  border: 1px solid rgba(126, 184, 247, 0.2);
+  border: 1px solid rgba(79, 119, 45, 0.22);
   border-radius: 8px;
   padding: 2.5rem;
   max-width: 520px;
@@ -262,7 +279,7 @@
   height: 32px;
   border-radius: 50%;
   cursor: pointer;
-  font-size: 0.8rem;
+  font-size: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -270,12 +287,12 @@
 }
 
 .closeBtn:hover {
-  border-color: #7eb8f7;
-  color: #7eb8f7;
+  border-color: #4f772d;
+  color: #4f772d;
 }
 
 .modalStars {
-  color: #7eb8f7;
+  color: #4f772d;
   font-size: 1.2rem;
   letter-spacing: 3px;
   margin-bottom: 1.2rem;
@@ -291,29 +308,15 @@
 }
 
 .modalAuthor {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  border-top: 1px solid rgba(126, 184, 247, 0.1);
+  border-top: 1px solid rgba(79, 119, 45, 0.16);
   padding-top: 1.2rem;
-}
-
-.modalAuthor strong {
-  display: block;
-  font-size: 0.9rem;
-  color: #f5f3ee;
-}
-
-.modalAuthor span {
-  font-size: 0.75rem;
-  color: rgba(245, 243, 238, 0.4);
-  letter-spacing: 1px;
 }
 
 @media (max-width: 900px) {
   .reviewsGrid {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .feedbackSection {
     grid-template-columns: 1fr;
     gap: 3rem;

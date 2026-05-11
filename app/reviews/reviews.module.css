@@ -1,0 +1,196 @@
+.page {
+  min-height: 100vh;
+  padding: 7rem clamp(1rem, 5vw, 5rem) 4rem;
+  background:
+    radial-gradient(circle at 12% 8%, rgba(239, 35, 180, 0.9), transparent 24rem),
+    radial-gradient(circle at 36% 0%, rgba(255, 207, 83, 0.95), transparent 22rem),
+    radial-gradient(circle at 62% 3%, rgba(74, 219, 239, 0.95), transparent 24rem),
+    radial-gradient(circle at 8% 86%, rgba(102, 125, 255, 0.85), transparent 24rem),
+    radial-gradient(circle at 48% 100%, rgba(223, 17, 86, 0.75), transparent 26rem),
+    #090910;
+  color: #eef4ff;
+  font-family: var(--reviews-font), sans-serif;
+}
+
+.panel {
+  position: relative;
+  max-width: 1440px;
+  min-height: 760px;
+  margin: 0 auto;
+  padding: clamp(3rem, 7vw, 7rem) clamp(1.5rem, 6vw, 7.5rem);
+  overflow: hidden;
+  border: 1px solid rgba(138, 178, 255, 0.16);
+  background:
+    radial-gradient(circle at 52% 18%, rgba(68, 155, 230, 0.35), transparent 18rem),
+    linear-gradient(180deg, rgba(13, 55, 112, 0.82), rgba(7, 6, 32, 0.96));
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.42);
+}
+
+.gridOverlay {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 96px 96px;
+  mask-image: linear-gradient(to bottom, black 0%, transparent 55%);
+  pointer-events: none;
+}
+
+.header {
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+  margin: 0 auto clamp(3rem, 7vw, 5rem);
+  text-align: center;
+}
+
+.header p {
+  margin: 0 0 0.8rem;
+  color: rgba(238, 244, 255, 0.55);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.header span {
+  display: block;
+  max-width: 520px;
+  margin: 1.4rem auto 0;
+  color: rgba(238, 244, 255, 0.74);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.55;
+}
+
+.cards {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  min-height: 400px;
+  padding: clamp(1.5rem, 3vw, 2rem);
+  border: 1px solid rgba(210, 225, 255, 0.22);
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at 72% 100%, rgba(190, 211, 255, 0.45), transparent 11rem),
+    linear-gradient(180deg, rgba(11, 11, 48, 0.72), rgba(8, 8, 35, 0.88));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+}
+
+.card:nth-child(2) {
+  transform: translateY(-1px);
+  border-color: rgba(225, 235, 255, 0.36);
+}
+
+.avatar {
+  display: grid;
+  width: 90px;
+  height: 90px;
+  margin-bottom: 2rem;
+  place-items: center;
+  border-radius: 50%;
+  color: #08102a;
+  font-size: 1.25rem;
+  font-weight: 800;
+  box-shadow: inset 0 0 0 10px rgba(255, 255, 255, 0.72);
+}
+
+.avatar0 {
+  background: linear-gradient(140deg, #9fc5ff, #2aa673);
+}
+
+.avatar1 {
+  background: linear-gradient(140deg, #fff1d7, #ff8b5f);
+}
+
+.avatar2 {
+  background: linear-gradient(140deg, #f8fbff, #d3def7);
+}
+
+.card h2 {
+  margin: 0 0 0.4rem;
+  font-size: 1.35rem;
+  letter-spacing: 0.01em;
+}
+
+.role {
+  margin: 0 0 1rem;
+  color: rgba(238, 244, 255, 0.74);
+  font-size: 1rem;
+}
+
+.stars {
+  display: flex;
+  gap: 0.18rem;
+  margin-bottom: 1.3rem;
+}
+
+.star {
+  width: 17px;
+  height: 17px;
+}
+
+.star path {
+  fill: #9fbeff;
+}
+
+.card blockquote {
+  margin: 0;
+  color: #ffffff;
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.card time {
+  display: block;
+  margin-top: 1.4rem;
+  color: rgba(238, 244, 255, 0.5);
+  font-size: 0.82rem;
+}
+
+@media (max-width: 920px) {
+  .cards {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+  }
+
+  .panel {
+    min-height: auto;
+  }
+
+  .card:nth-child(2) {
+    transform: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .page {
+    padding-inline: 1rem;
+  }
+
+  .panel {
+    padding: 3rem 1rem;
+  }
+
+  .avatar {
+    width: 74px;
+    height: 74px;
+    margin-bottom: 1.5rem;
+  }
+}

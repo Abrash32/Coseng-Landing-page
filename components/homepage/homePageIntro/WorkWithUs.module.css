@@ -2,7 +2,7 @@
   padding: 5rem clamp(1.5rem, 6vw, 7rem);
   position: relative;
   overflow: hidden;
-  background: #0a0a2e;
+  background: #06061a;
   border-top: 1px solid rgba(201, 168, 76, 0.15);
 }
 
@@ -31,9 +31,7 @@
 }
 
 .ctaTag {
-  color: 
-#07bceae8
-;
+  color: #4f772d;
   font-size: 0.85rem;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -49,9 +47,7 @@
 }
 
 .ctaTitle em {
-  color: 
-#07bceae8
-;
+  color: #4f772d;
   font-style: italic;
 }
 

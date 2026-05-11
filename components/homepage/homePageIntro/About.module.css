@@ -4,44 +4,42 @@
   grid-template-columns: 1fr 1fr;
   gap: 5rem;
   align-items: center;
-  background: #06061a;
+  background: #ffffff;
 }
 
 .sectionTag {
-  font-size: 0.75rem;
+  font-size: 1rem;
+  font-weight: 500;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: 
-#07bceae8
-;
+  color: #4f772d;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .sectionTitle {
   font-size: clamp(2rem, 4vw, 3rem);
   line-height: 1.2;
   margin-bottom: 1.5rem;
-  color: #f5f3ee;
+  color: #06061a;
 }
 
 .sectionTitle em {
-  color: 
-#07bceae8
-;
+  color: #4f772d;
   font-style: italic;
 }
 
 .aboutText {
   font-size: 0.95rem;
   line-height: 1.9;
-  color: rgba(245,243,238,0.65);
+  color: rgba(6, 6, 26, 0.7);
   margin-bottom: 2rem;
 }
 
 .btnPrimary {
   display: inline-block;
   background: #4f772d;
-  color: #06061a;
+  color: #ffffff;
   padding: 0.9rem 2rem;
   font-weight: 600;
   font-size: 0.85rem;
@@ -66,21 +64,21 @@
 }
 
 .stat {
-  border-left: 2px solid rgba(201,168,76,0.3);
+  border-left: 2px solid rgba(79, 119, 45, 0.3);
   padding-left: 1rem;
 }
 
 .statNum {
   font-size: 2rem;
   font-weight: 700;
-  color: #ebedea;
+  color: #06061a;
   line-height: 1;
   margin-bottom: 0.3rem;
 }
 
 .statLabel {
   font-size: 0.8rem;
-  color: rgba(245,243,238,0.5);
+  color: rgba(6, 6, 26, 0.6);
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -114,7 +112,7 @@
   left: 50%;
   transform: translateX(-50%);
   background: #4f772d;
-  color: #06061a;
+  color: #ffffff;
   padding: 1rem 1.5rem;
   border-radius: 4px;
   display: flex;

@@ -27,7 +27,7 @@ const tabData = {
     ],
   },
   engineering: {
-    color: "#2cb87a",
+    color: "#4f772d",
     dimColor: "rgba(44,184,122,0.12)",
     icon: "🌿",
     division: "Division 02",
