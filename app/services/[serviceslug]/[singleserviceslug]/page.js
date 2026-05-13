@@ -60,6 +60,9 @@ async function GetSingleServiceDetail({ params }) {
             gap: "0.5rem",
             alignItems: "center",
             alignContent: "center",
+            color: "#23375D",
+            fontWeight: "600",
+            textDecoration: "none",
           }}
         >
           <p style={{ marginTop: "0.2rem" }}>

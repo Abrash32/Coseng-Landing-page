@@ -26,9 +26,8 @@
 .cta > .raised {
   color: #ffffff;
   text-decoration: none;
-  background-color: #f73206;
-  background-color: var(--outlineColor);
-  border: 1px solid var(--outlineColor);
+  background-color: #23375D; /* Dark Blue */
+  border: 1px solid #23375D;
 }
 .cta > a:hover,
 .cta > a:active,
@@ -41,20 +40,19 @@
 }
 .cta > .flat {
   background: var(--background);
-  border: 1px solid var(--outlineColor);
-  color: var(--outlineColor);
+  border: 1px solid #23375D;
+  color: #23375D;
   text-align: center;
   text-decoration: none;
 }
 .cta > .flat:hover,
 .cta > .flat:active {
   color: #ffffff;
-  background-color: var(--outlineColor);
+  background-color: #23375D;
 }
 .cta > .raised:hover {
-  background-color: #6a994e;
-  /* color: var(--outlineColor); */
-  border: 1px solid var(--outlineColor);
+  background-color: #6a994e; /* Green */
+  border: 1px solid #6a994e;
 }
 
 .cta > button {

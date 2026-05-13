@@ -324,6 +324,78 @@
             "amount": "£650",
             "cta": "Enroll Now"
           },
+           {
+            "name": " Advanced Data Analytics Program (One-to-one training)",
+            "description": "",
+            "levels": [
+              "Entry/beginners (fundamental)",
+              "Intermediate Level",
+              "Advanced Data Analytics"
+            ],
+            "highlights": [
+              "Excel for Data Analysis",
+              "Advanced Excel Features",
+              "Power BI for Data Visualization",
+              "SQL for Database Management",
+              "Python and Machine Learning",
+              "2 weeks Live Projects",
+              "Free Training on enhancing your presentation Skills",
+              "Free CV Building Support",
+              "Free Job interview preparations"
+            ],
+            "modules": [
+              {
+                "title": "Excel for Data Analysis",
+                "highlights": [
+                  "Introduction to Data Analysis: Basic concepts and methodologies",
+                  "Data Cleaning and Manipulation: Preparing and organizing data in Excel",
+                  "Power Query for Data Import and Transformation: Importing, cleaning, and transforming data from multiple sources",
+                  "Exploratory Data Analysis: Visualizations and basic statistical analysis"
+                ]
+              },
+              {
+                "title": "Advanced Excel Features",
+                "highlights": [
+                  "VLOOKUPs, PivotTables, and advanced charting",
+                  "Building data models with Power Pivot and creating reports."
+                ]
+              },
+              {
+                "title": "Power BI for Data Visualization",
+                "highlights": [
+                  "Power BI Basics: Introduction to Power BI and key features.",
+                  "Data Import and Transformation: Using Power Query for data preparation.",
+                  "DAX Functions: Custom calculations with DAX.",
+                  "Interactive Dashboards and Reporting: Designing dashboards and visual reports."
+                ]
+              },
+              {
+                "title": "SQL for Database Management",
+                "highlights": [
+                  "SQL Basics: Writing basic queries for data retrieval.",
+                  "Advanced SQL: Complex queries and ETL processes."
+                ]
+              },
+              {
+                "title": "Python and Machine Learning",
+                "highlights": [
+                  "Python Basics: Introduction to Python for data analysis.",
+                  "Machine Learning Fundamentals: Basics of machine learning using Python."
+                ]
+              },
+              {
+                "title": "3 weeks Live Projects",
+                "highlights": [
+                  "Students apply their knowledge to solve real-world problems using actual data and present their findings."
+                ]
+              }
+            ],
+            "duration": "4 months",
+            "amount": "£1200",
+            "cta": "Enroll Now",
+            "slug": "advanced-data-analytics-program",
+            "category": "training"
+          },
           {
             "name": " Advanced Data Analytics Program",
             "description": "",
@@ -394,6 +466,7 @@
             "amount": "£1200",
             "cta": "Enroll Now"
           }
+          
         ],
         "whyus": "Why Choose us",
         "reasons": [
