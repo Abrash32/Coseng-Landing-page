@@ -13,7 +13,7 @@ export default function Navbar() {
   <Link href="/">
   <div className={classes.logo}>
     <Image
-      src="/images/LogoNewjj.png"
+      src="/image/coseng_logo_3d.html"
       alt="COSENG Logo"
       width={100}
       height={10}
@@ -43,8 +43,32 @@ export default function Navbar() {
       </ul>
 
       {/* CTA Button */}
-      <Link href="/contact" className={classes.navCta}>
-        Contact Us
+      <Link href="/contact" className={classes.btnWrap} aria-label="Contact us">
+        <div className={classes.rippleRing}></div>
+        <div className={classes.rippleRing}></div>
+        <div className={classes.rippleRing}></div>
+        <button 
+          className={classes.liquidBtn} 
+          onMouseMove={(e) => {
+            const rect = e.currentTarget.getBoundingClientRect();
+            const x = ((e.clientX - rect.left) / rect.width * 100).toFixed(1);
+            const y = ((e.clientY - rect.top) / rect.height * 100).toFixed(1);
+            e.currentTarget.style.setProperty('--mx', x + '%');
+            e.currentTarget.style.setProperty('--my', y + '%');
+          }}
+          tabIndex="-1"
+        >
+          <div className={classes.glassBody}>
+            <div className={classes.glassFill}></div>
+            <div className={classes.glassBorder}></div>
+            <div className={classes.glassSpecular}></div>
+            <div className={classes.glassShineBottom}></div>
+            <div className={classes.glassDepth}></div>
+          </div>
+          <span className={classes.btnContent}>
+            Contact Us
+          </span>
+        </button>
       </Link>
 
       {/* Mobile hamburger */}

@@ -2,8 +2,8 @@
   padding: 5rem clamp(1.5rem, 6vw, 7rem);
   position: relative;
   overflow: hidden;
-  background: #06061a;
-  border-top: 1px solid rgba(201, 168, 76, 0.15);
+  background: #23375D; /* Dark Blue */
+  border-top: 1px solid rgba(106, 153, 78, 0.2); /* Green */
 }
 
 .cta::before {
@@ -14,7 +14,7 @@
   transform: translate(-50%, -50%);
   font-family: var(--font-display);
   font-size: clamp(8rem, 20vw, 20rem);
-  color: rgba(201, 168, 76, 0.04);
+  color: rgba(255, 255, 255, 0.03); /* White subtle text */
   white-space: nowrap;
   pointer-events: none;
   letter-spacing: 10px;
@@ -31,11 +31,12 @@
 }
 
 .ctaTag {
-  color: #4f772d;
+  color: #6A994E; /* Green */
   font-size: 0.85rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   margin-bottom: 0.6rem;
+  font-weight: 700;
 }
 
 .ctaTitle {
@@ -43,11 +44,12 @@
   font-size: clamp(1.8rem, 3.5vw, 3rem);
   line-height: 1.2;
   max-width: 550px;
-  color: #f5f3ee;
+  color: #FFFFFF; /* White */
+  font-weight: 700;
 }
 
 .ctaTitle em {
-  color: #4f772d;
+  color: #6A994E; /* Green */
   font-style: italic;
 }
 
@@ -60,37 +62,41 @@
 }
 
 .btnPrimary {
-  background: #4f772d;
-  color: #06061a;
+  background: #6A994E; /* Green */
+  color: #FFFFFF; /* White */
   padding: 1.1rem 2.5rem;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1rem;
   letter-spacing: 1px;
   text-transform: uppercase;
   text-decoration: none;
-  border-radius: 2px;
+  border-radius: 4px;
   white-space: nowrap;
-  transition: background 0.2s, transform 0.2s;
+  transition: background 0.3s, color 0.3s, transform 0.3s;
 }
 
 .btnPrimary:hover {
-  background: #6ba736;
+  background: #FFFFFF; /* White */
+  color: #23375D; /* Dark Blue */
   transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .ctaEmail {
-  font-size: 0.8rem;
-  color: #9a9a8a;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7); /* Off-white */
   letter-spacing: 1px;
 }
 
 .ctaEmail a {
-  color: #f5f4f3;
+  color: #FFFFFF; /* White */
   text-decoration: none;
+  font-weight: 600;
 }
 
 .ctaEmail a:hover {
   text-decoration: underline;
+  color: #6A994E; /* Green */
 }
 
 @media (max-width: 700px) {

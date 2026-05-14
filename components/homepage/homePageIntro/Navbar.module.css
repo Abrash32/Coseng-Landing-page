@@ -8,7 +8,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 1.2rem clamp(1.5rem, 6vw, 7rem);
-  background: rgba(6, 6, 26, 0.95);
+  background: rgba(35, 55, 93, 0.95); /* Dark Blue */
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(201, 168, 76, 0.15);
   height: 64px;
@@ -46,22 +46,156 @@
   color: #4F772D;
 }
 
-.navCta {
-  background: #4F772D;
-  color: #06061a;
-  padding: 0.55rem 1.4rem;
-  border-radius: 2px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+/* Liquid Glass 3D Button */
+.btnWrap {
+  position: relative;
+  z-index: 1;
   text-decoration: none;
-  transition: background 0.2s;
+  display: inline-block;
+  perspective: 1000px;
 }
 
-.navCta:hover {
-  background:  #4F772D;
+.liquidBtn {
+  position: relative;
+  padding: 10px 24px; /* Scaled down for Navbar */
+  border: none;
+  cursor: pointer;
+  border-radius: 999px;
+  outline: none;
+  background: transparent;
+  transform: translateZ(0);
+  transition: transform 0.18s cubic-bezier(.34,1.56,.64,1), filter 0.18s ease;
+  filter: drop-shadow(0 8px 32px rgba(100,160,255,0.28)) drop-shadow(0 2px 8px rgba(0,0,0,0.18));
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 }
+
+.btnWrap:hover .liquidBtn {
+  transform: translateY(-3px) scale(1.035) rotateX(10deg) rotateY(-5deg) translateZ(10px);
+  filter: drop-shadow(0 14px 40px rgba(100,160,255,0.38)) drop-shadow(0 4px 12px rgba(0,0,0,0.22));
+}
+
+.btnWrap:active .liquidBtn {
+  transform: translateY(1px) scale(0.97) translateZ(0);
+  filter: drop-shadow(0 4px 16px rgba(100,160,255,0.22)) drop-shadow(0 2px 6px rgba(0,0,0,0.16));
+  transition: transform 0.08s ease, filter 0.08s ease;
+}
+
+.glassBody {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.glassFill {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.38) 0%,
+    rgba(255,255,255,0.12) 35%,
+    rgba(180,210,255,0.18) 60%,
+    rgba(210,180,255,0.22) 100%
+  );
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+}
+
+.glassBorder {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.55);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.75),
+    inset 0 -1px 0 rgba(255,255,255,0.15),
+    inset 1px 0 0 rgba(255,255,255,0.35),
+    inset -1px 0 0 rgba(255,255,255,0.1);
+}
+
+.glassSpecular {
+  position: absolute;
+  top: 3px; left: 14px; right: 14px;
+  height: 42%;
+  border-radius: 999px;
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.72) 0%,
+    rgba(255,255,255,0.18) 60%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+.glassShineBottom {
+  position: absolute;
+  bottom: 3px; left: 20px; right: 20px;
+  height: 28%;
+  border-radius: 999px;
+  background: linear-gradient(
+    0deg,
+    rgba(255,255,255,0.28) 0%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+.glassDepth {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: radial-gradient(
+    ellipse 70% 60% at 50% 120%,
+    rgba(120,160,255,0.22) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.btnContent {
+  position: relative;
+  z-index: 2;
+  font-family: -apple-system, 'SF Pro Display', BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: rgba(255,255,255,0.96);
+  text-shadow: 0 1px 4px rgba(0,0,0,0.22), 0 0 20px rgba(200,220,255,0.5);
+  user-select: none;
+  white-space: nowrap;
+}
+
+.rippleRing {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  border: 1.5px solid rgba(255,255,255,0);
+  animation: ring-pulse 3s ease-in-out infinite;
+}
+.rippleRing:nth-child(2) { animation-delay: 1s; }
+.rippleRing:nth-child(3) { animation-delay: 2s; }
+
+@keyframes ring-pulse {
+  0% { transform: scale(1); border-color: rgba(255,255,255,0); }
+  40% { border-color: rgba(180,210,255,0.35); }
+  100% { transform: scale(1.22); border-color: rgba(255,255,255,0); }
+}
+
+.liquidBtn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: radial-gradient(circle at var(--mx,50%) var(--my,50%), rgba(255,255,255,0.18) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  z-index: 3;
+}
+.btnWrap:hover .liquidBtn::after { opacity: 1; }
 
 /* Hamburger - mobile only */
 .hamburger {
@@ -92,7 +226,7 @@
   top: 64px;
   left: 0;
   width: 100%;
-  background: rgba(6, 6, 26, 0.98);
+  background: rgba(35, 55, 93, 0.98); /* Dark Blue */
   border-bottom: 1px solid rgba(201, 168, 76, 0.15);
   padding: 1rem 0;
 }
@@ -126,7 +260,7 @@
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(6, 6, 26, 0.98);
+  background-color: rgba(35, 55, 93, 0.98); /* Dark Blue */
   min-width: 180px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 100;
@@ -189,7 +323,7 @@
   .navLinks {
     display: none;
   }
-  .navCta {
+  .btnWrap {
     display: none;
   }
   .hamburger {

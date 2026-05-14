@@ -55,3 +55,7 @@ lint-errors.txt
 #build log
 build_log.txt
 build_error.txt
+
+#git
+.git
+COMMIT_EDITMSG
