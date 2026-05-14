@@ -14,12 +14,11 @@
   height: 64px;
 }
 
-.logo {
-  font-size: 1.8rem;
-  letter-spacing: 3px;
-  color: #c9a84c;
-  font-weight: 900;
-  text-transform: uppercase;
+.logoLink {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  z-index: 10;
 }
 
 .navLinks {

@@ -1,27 +1,17 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
 import { useState } from "react";
 import classes from "./Navbar.module.css";
+import ThreeDLogo from "./ThreeDLogo";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <nav className={classes.navbar}>
-     <div className={classes.logo}>
-  <Link href="/">
-  <div className={classes.logo}>
-    <Image
-      src="/image/coseng_logo_3d.html"
-      alt="COSENG Logo"
-      width={100}
-      height={10}
-      style={{ objectFit: "contain" }}
-    />
-  </div>
-</Link>
-</div>
+      <Link href="/" className={classes.logoLink}>
+        <ThreeDLogo />
+      </Link>
 
       {/* Desktop links */}
       <ul className={classes.navLinks}>
