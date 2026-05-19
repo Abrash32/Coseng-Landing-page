@@ -29,7 +29,7 @@ export default function Navbar() {
         <li><Link href="/reviews">Reviews</Link></li>
         
         <li className={classes.dropdown}>
-          <Link href="#services" className={classes.dropbtn}>Services</Link>
+          <Link href="/services" className={classes.dropbtn}>Services</Link>
           <div className={classes.dropdownContent}>
             <Link href="/TechConsult">Tech Consulting</Link>
             <Link href="/engineering">Engineering</Link>

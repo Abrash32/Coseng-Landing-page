@@ -1,0 +1,548 @@
+/* ═══════════════════════════════════════
+   SERVICES PAGE — Brand-aligned
+   #000000 | #FFFFFF | #23375D | #6A994E
+   ═══════════════════════════════════════ */
+
+.page {
+  background: #000000;
+  color: #FFFFFF;
+  font-family: var(--font-body), sans-serif;
+}
+
+/* ─────────────────────────────────────
+   HERO
+───────────────────────────────────── */
+
+.hero {
+  position: relative;
+  background: #000000;
+  padding: 10rem clamp(1.5rem, 6vw, 7rem) 6rem;
+  overflow: hidden;
+  text-align: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 80px 80px;
+  mask-image: linear-gradient(to bottom, black 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: -160px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(35, 55, 93, 0.25) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.heroInner {
+  position: relative;
+  z-index: 1;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #6A994E;
+}
+
+.eyebrow::before,
+.eyebrow::after {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 1px;
+  background: #6A994E;
+  opacity: 0.6;
+}
+
+.heroTitle {
+  margin: 0;
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.heroTitle em {
+  font-style: normal;
+  color: #6A994E;
+}
+
+.heroSub {
+  display: block;
+  max-width: 580px;
+  margin: 1.6rem auto 2.4rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: clamp(1rem, 1.8vw, 1.1rem);
+  line-height: 1.75;
+}
+
+.heroNav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  position: relative;
+  z-index: 1;
+}
+
+.heroNavBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.82rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.22s ease, border-color 0.22s ease, color 0.22s ease;
+}
+
+.heroNavBtn:hover {
+  background: rgba(106, 153, 78, 0.15);
+  border-color: #6A994E;
+  color: #FFFFFF;
+}
+
+/* ─────────────────────────────────────
+   SERVICE BANDS — alternating dark / light
+───────────────────────────────────── */
+
+.bandDark {
+  background: #000000;
+  color: #FFFFFF;
+}
+
+.bandLight {
+  background: #FFFFFF;
+  color: #000000;
+}
+
+.bandInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6rem clamp(1.5rem, 5vw, 4rem);
+}
+
+/* ─────────────────────────────────────
+   SERVICE LAYOUT
+───────────────────────────────────── */
+
+.serviceGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.serviceGridReverse {
+  direction: rtl;
+}
+
+.serviceGridReverse > * {
+  direction: ltr;
+}
+
+.serviceText {
+  display: flex;
+  flex-direction: column;
+}
+
+/* label */
+.serviceLabel {
+  display: inline-block;
+  font-size: 0.68rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #6A994E;
+}
+
+.serviceLabelLight {
+  display: inline-block;
+  font-size: 0.68rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #6A994E;
+}
+
+/* icon + number */
+.serviceIconRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.serviceIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+
+.iconDark {
+  background: rgba(106, 153, 78, 0.12);
+  border: 1px solid rgba(106, 153, 78, 0.25);
+}
+
+.iconLight {
+  background: rgba(35, 55, 93, 0.08);
+  border: 1px solid rgba(35, 55, 93, 0.15);
+}
+
+.serviceNum {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.35;
+}
+
+.serviceHeading {
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin: 0 0 1.25rem;
+}
+
+.serviceBody {
+  font-size: 1rem;
+  line-height: 1.8;
+  opacity: 0.75;
+  margin-bottom: 1.5rem;
+  max-width: 500px;
+}
+
+/* sub-features list */
+.featureList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  opacity: 0.8;
+}
+
+.featureDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #6A994E;
+  flex-shrink: 0;
+  margin-top: 0.45rem;
+}
+
+/* CTA link */
+.serviceLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, opacity 0.22s ease;
+  align-self: flex-start;
+}
+
+.linkDark {
+  background: #23375D;
+  color: #FFFFFF;
+  box-shadow: 0 4px 16px rgba(35, 55, 93, 0.35);
+}
+
+.linkDark:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(35, 55, 93, 0.45);
+}
+
+.linkLight {
+  background: #23375D;
+  color: #FFFFFF;
+  box-shadow: 0 4px 16px rgba(35, 55, 93, 0.2);
+}
+
+.linkLight:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(35, 55, 93, 0.3);
+}
+
+/* ─────────────────────────────────────
+   VISUAL PANEL (right side)
+───────────────────────────────────── */
+
+.visualPanel {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  min-height: 400px;
+}
+
+.visualPanelDark {
+  background: linear-gradient(135deg, rgba(35, 55, 93, 0.6), rgba(0, 0, 0, 0.9));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.visualPanelLight {
+  background: linear-gradient(135deg, rgba(35, 55, 93, 0.07), rgba(79, 119, 45, 0.05));
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.visualPanelInner {
+  padding: 2.5rem;
+  height: 100%;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.visualBigIcon {
+  font-size: 4rem;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+}
+
+.miniCards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.miniCard {
+  padding: 1rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.miniCardDark {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.miniCardLight {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.miniCardIcon {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.miniCardTitle {
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.3;
+  opacity: 0.85;
+}
+
+.miniCardDesc {
+  font-size: 0.72rem;
+  line-height: 1.5;
+  opacity: 0.55;
+}
+
+/* ─────────────────────────────────────
+   TRAINING SECTION (standalone band)
+───────────────────────────────────── */
+
+.trainingGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.trainingCard {
+  padding: 2rem 1.75rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.trainingCard:hover {
+  background: rgba(106, 153, 78, 0.08);
+  border-color: rgba(106, 153, 78, 0.3);
+  transform: translateY(-4px);
+}
+
+.trainingCardIcon {
+  font-size: 1.8rem;
+}
+
+.trainingCardTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.3;
+}
+
+.trainingCardDesc {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.6);
+  flex: 1;
+}
+
+.trainingCardLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #6A994E;
+  text-decoration: none;
+  margin-top: auto;
+  transition: gap 0.2s ease;
+}
+
+.trainingCardLink:hover {
+  gap: 0.6rem;
+}
+
+/* ─────────────────────────────────────
+   CTA BAND
+───────────────────────────────────── */
+
+.ctaBand {
+  background: #23375D;
+  padding: 5rem clamp(1.5rem, 6vw, 7rem);
+  text-align: center;
+}
+
+.ctaInner {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.ctaTitle {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+  letter-spacing: -0.03em;
+}
+
+.ctaBody {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9rem 2.2rem;
+  background: #6A994E;
+  color: #FFFFFF;
+  border-radius: 8px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  box-shadow: 0 4px 20px rgba(106, 153, 78, 0.35);
+}
+
+.ctaBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 32px rgba(106, 153, 78, 0.45);
+}
+
+/* ─────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────── */
+
+@media (max-width: 960px) {
+  .serviceGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .serviceGridReverse {
+    direction: ltr;
+  }
+
+  .visualPanel {
+    min-height: 280px;
+  }
+
+  .visualPanelInner {
+    min-height: 280px;
+  }
+
+  .trainingGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 8rem 1.5rem 4rem;
+  }
+
+  .bandInner {
+    padding: 4rem 1.5rem;
+  }
+
+  .miniCards {
+    grid-template-columns: 1fr;
+  }
+
+  .heroNav {
+    flex-direction: column;
+    align-items: center;
+  }
+}

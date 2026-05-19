@@ -77,7 +77,7 @@ export default async function ReviewsPage() {
           </h1>
           <span className={classes.heroSub}>
             Discover what our satisfied customers have to say about their
-            experiences with COSENG's products and services.
+            experiences with COSENG&apos;s products and services.
           </span>
         </div>
       </section>
