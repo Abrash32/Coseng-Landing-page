@@ -1,8 +1,9 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import Image from "next/image";
 import classes from "./Navbar.module.css";
-import ThreeDLogo from "./ThreeDLogo";
+
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -10,7 +11,16 @@ export default function Navbar() {
   return (
     <nav className={classes.navbar}>
       <Link href="/" className={classes.logoLink}>
-        <ThreeDLogo />
+        <div className={classes.logoContainer}>
+          <Image
+            src="/images/cosenglogo.png"
+            alt="Coseng Logo"
+            width={160}
+            height={70}
+            className={classes.logoImage}
+            priority
+          />
+        </div>
       </Link>
 
       {/* Desktop links */}

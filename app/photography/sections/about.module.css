@@ -1,7 +1,8 @@
+/* ── About Section — Light Band ── */
 .about {
   gap: 4rem;
-  color: var(--foreground);
-  background-color: var(--background);
+  color: #000000;
+  background-color: #ffffff;
   width: 100%;
   height: fit-content;
   flex-direction: column;
@@ -10,6 +11,7 @@
   grid-template-columns: 1fr 1fr;
   align-items: center;
 }
+
 .imageSection {
   height: auto;
   width: 100%;
@@ -17,13 +19,71 @@
   grid-template-columns: 1fr;
   grid-gap: 1.5rem;
 }
+
 .aboutImage {
   position: relative;
   height: 22rem;
   border-radius: 0.5rem;
   cursor: pointer;
   overflow: hidden;
+  box-shadow: 0 8px 32px rgba(35, 55, 93, 0.12);
 }
+
+.aboutImage img {
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.aboutIntro {
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+  max-width: 30rem;
+}
+
+.aboutIntro > h4 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #6A994E;
+  font-weight: 700;
+}
+
+.aboutIntro > h1 {
+  font-size: 2.2rem;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #23375D;
+}
+
+.aboutIntro > p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: rgba(0, 0, 0, 0.72);
+}
+
+.cta {
+  margin-top: 0.5rem;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 0.85rem 2rem;
+  background: #6A994E;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  border-radius: 0.35rem;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.ctaButton:hover {
+  background: #558033;
+  transform: translateY(-2px);
+}
+
 @media (max-width: 800px) {
   .about {
     width: 100%;
@@ -32,77 +92,40 @@
     flex-direction: column;
     gap: 2.5rem;
   }
+
   .imageSection {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
   }
+
   .aboutImage {
     height: 18rem;
   }
 }
 
-.aboutImage img {
-  object-fit: cover;
-  border-radius: 0.5rem;
-}
-.aboutIntro {
-  display: flex;
-  gap: 1.5rem;
-  flex-direction: column;
-  max-width: 30rem;
-}
-.aboutIntro > h4 {
-  font-size: 0.95rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #f3f3f4;
-  font-weight: 600;
-}
-.aboutIntro > h1 {
-  font-size: 2.2rem;
-  line-height: 1.2;
-  font-weight: 700;
-}
-.aboutIntro > p {
-  font-size: 1.05rem;
-  line-height: 1.7;
-  opacity: 0.8;
-}
 @media (min-width: 1100px) {
   .about {
     flex-direction: row;
     align-items: center;
     padding: 6rem clamp(1.5rem, 6vw, 7rem);
   }
+
   .aboutIntro {
     width: 90%;
   }
+
   .aboutImage {
     height: 24rem;
   }
+
   .cta {
     margin-top: 2rem;
   }
 }
+
 @media (min-width: 1400px) {
   .aboutImage {
     height: 30rem;
   }
-}
-
-.ctaButton {
-  display: inline-block;
-  padding: 0.85rem 2rem;
-  background: #4f772d;
-  color: #020000;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.9rem;
-  letter-spacing: 0.05em;
-  border-radius: 0.35rem;
-  transition: opacity 0.2s ease;
-}
-.ctaButton:hover {
-  opacity: 0.85;
 }

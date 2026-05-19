@@ -1,13 +1,16 @@
+/* ── Email CTA Section — Light Band ── */
 .emailSection {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  background: #06061a;
+  background: #ffffff;
   padding: 5rem clamp(1.5rem, 6vw, 7rem);
   width: 100%;
   justify-content: center;
   align-items: center;
-  color: #f5f3ee;
+  color: #000000;
+  border-top: 1px solid rgba(35, 55, 93, 0.08);
+  border-bottom: 1px solid rgba(35, 55, 93, 0.08);
 }
 
 .header {
@@ -17,36 +20,37 @@
 }
 
 .header > p {
-  font-size: 0.95rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #f7f4f9;
-  font-weight: 600;
+  letter-spacing: 3px;
+  color: #6A994E;
+  font-weight: 700;
 }
 
 .header > h1 {
   font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-  line-height: 1.5;
+  line-height: 1.6;
   margin: 0;
   margin-top: 0.8rem;
-  opacity: 0.85;
+  color: #23375D;
+  font-weight: 700;
 }
 
 .ctaBtn {
   display: inline-block;
-  padding: 0.85rem 2rem;
-  background: #4f772d;
-  color: #f8f5f5;
+  padding: 0.9rem 2.2rem;
+  background: #6A994E;
+  color: #ffffff;
   text-decoration: none;
   font-weight: 600;
   font-size: 0.85rem;
   letter-spacing: 0.08em;
-  border-radius: 0.3rem;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  border-radius: 0.35rem;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .ctaBtn:hover {
-  opacity: 0.9;
+  background: #558033;
   transform: translateY(-2px);
 }
 

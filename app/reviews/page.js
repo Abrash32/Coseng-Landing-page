@@ -3,6 +3,7 @@ import classes from "./reviews.module.css";
 
 import { getFromDatabase } from "@/lib/getFromDatabase";
 import FeedbackSection from "@/components/homepage/homePageIntro/FeedbackSection";
+import StatsStrip from "./StatsStrip";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -28,8 +29,9 @@ function Stars({ rating }) {
 }
 
 export const metadata = {
-  title: "Reviews - COSENG Limited",
-  description: "Read what COSENG clients say about their experience.",
+  title: "Client Reviews – COSENG Limited",
+  description:
+    "Read authentic reviews from satisfied COSENG clients. Discover what people say about our engineering, photography, and professional services.",
 };
 
 export default async function ReviewsPage() {
@@ -45,43 +47,82 @@ export default async function ReviewsPage() {
     role: review.role || review.company || "Client",
     rating: parseInt(review.stars || review.rating) || 5,
     quote: review.feedback || review.review || "",
-    date: review.createdAt ? new Date(review.createdAt).toLocaleDateString("en-US", { year: 'numeric', month: 'short', day: 'numeric' }) : "Recent",
+    date: review.createdAt
+      ? new Date(review.createdAt).toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "short",
+          day: "numeric",
+        })
+      : "Recent",
     initials: review.name ? review.name.substring(0, 2).toUpperCase() : "AN",
   }));
 
-  // Fallback to empty array if no reviews found yet, or keep old reviews if preferred? We will just show what's in DB.
-  
+  const totalReviews = formattedReviews.length;
+  const avgRating =
+    totalReviews > 0
+      ? (
+          formattedReviews.reduce((sum, r) => sum + r.rating, 0) / totalReviews
+        ).toFixed(1)
+      : "5.0";
+
   return (
     <main className={`${classes.page} ${dmSans.variable}`}>
-      <section className={classes.panel}>
-        <div className={classes.gridOverlay} />
 
-        <header className={classes.header}>
-          <p>Testimonials</p>
-          <h1>What people say</h1>
-          <span>
+      {/* ── HERO ── */}
+      <section className={classes.heroBand}>
+        <div className={classes.heroInner}>
+          <span className={classes.eyebrow}>Testimonials</span>
+          <h1 className={classes.heroTitle}>
+            What our clients <em>say</em>
+          </h1>
+          <span className={classes.heroSub}>
             Discover what our satisfied customers have to say about their
-            experiences with our products and services.
+            experiences with COSENG's products and services.
           </span>
-        </header>
-
-        <div className={classes.cards}>
-          {formattedReviews.map((review, index) => (
-            <article className={classes.card} key={index}>
-              <div className={`${classes.avatar} ${classes[`avatar${index % 4}`]}`}>
-                {review.initials}
-              </div>
-
-              <h2>{review.name}</h2>
-              <p className={classes.role}>{review.role}</p>
-              <Stars rating={review.rating} />
-              <blockquote>{review.quote}</blockquote>
-              <time>{review.date}</time>
-            </article>
-          ))}
         </div>
-        
-        <div style={{ marginTop: '5rem', position: 'relative', zIndex: 1, maxWidth: '1000px', margin: '5rem auto 0' }}>
+      </section>
+
+      {/* ── STAT STRIP ── */}
+      <StatsStrip totalReviews={totalReviews} avgRating={avgRating} />
+
+      {/* ── CARDS ── */}
+      <section className={classes.cardsBand}>
+        <span className={classes.bandLabel}>Reviews</span>
+        <h2 className={classes.bandTitle}>Voices from our community</h2>
+
+        {formattedReviews.length === 0 ? (
+          <div className={classes.emptyState}>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.77 9.77 0 01-4-.82L3 20l1.09-3.27A7.93 7.93 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+            </svg>
+            <p>No reviews yet — be the first to share your experience!</p>
+          </div>
+        ) : (
+          <div className={classes.cards}>
+            {formattedReviews.map((review, index) => (
+              <article className={classes.card} key={index}>
+                <div className={classes.cardTop}>
+                  <div className={`${classes.avatar} ${classes[`avatar${index % 4}`]}`}>
+                    {review.initials}
+                  </div>
+                  <div className={classes.cardMeta}>
+                    <h2>{review.name}</h2>
+                    <p className={classes.role}>{review.role}</p>
+                  </div>
+                </div>
+
+                <Stars rating={review.rating} />
+                <blockquote>{review.quote}</blockquote>
+                <time>{review.date}</time>
+              </article>
+            ))}
+          </div>
+        )}
+      </section>
+
+      {/* ── FEEDBACK FORM ── */}
+      <section className={classes.feedbackBand}>
+        <div className={classes.feedbackInner}>
           <FeedbackSection />
         </div>
       </section>

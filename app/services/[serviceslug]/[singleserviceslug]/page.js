@@ -7,6 +7,7 @@ import { notFound } from "next/navigation";
 import ProgramPricing from "@/components/programPricing/programPricing";
 import { IoChevronBackOutline } from "react-icons/io5";
 import Link from "next/link";
+import Image from "next/image";
 import { getOneFromDatabase } from "@/lib/getFromDatabase";
 
 export async function generateMetadata({ params }) {
@@ -100,9 +101,11 @@ async function GetSingleServiceDetail({ params }) {
           <h3 className={classes.whyUsTitle}>{singleService.whyus}</h3>
           <div className={classes.whyUsContentWrapper}>
             <div className={classes.whyUsImageWrapper}>
-              <img 
+              <Image 
                 src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop" 
                 alt="Why Choose Us" 
+                fill
+                className={classes.whyUsImage}
               />
             </div>
             <ul className={classes.whyUsList}>

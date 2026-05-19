@@ -9,6 +9,12 @@ import LocationDropBy from "./sections/locationDropBy";
 import Navbar from "@/components/homepage/homePageIntro/Navbar";
 import { getFromDatabase } from "@/lib/getFromDatabase";
 
+export const metadata = {
+  title: "Photography & Videography - Coseng",
+  description:
+    "Professional photography and videography services by COSENG. Capturing timeless moments for weddings, graduations, events and more.",
+};
+
 export default async function PhotographyPage() {
   let reviews = [];
   try {
